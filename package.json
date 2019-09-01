@@ -1,0 +1,19 @@
+{
+  "name": "kromalee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^1.0.3",
+     "vuepress-plugin-demo-code": "^0.3.5"
+  },
+  "devDependencies": {
+   
+  }
+}
