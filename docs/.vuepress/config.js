@@ -8,6 +8,8 @@ const searchConfig = require('./config/searchConfig.js')
 const gitConfig = require('./config/gitConfig.js')
 
 module.exports = {
+    
+    
     //基本配置
     base: '/',
     title: 'vuepress example',
@@ -19,8 +21,12 @@ module.exports = {
     serviceWorker: false,
     locales: undefined,
     shouldPrefetch: () => true,
-    // markdown config
+    
+    
+    // markdown配置
     markdown: markdownConfig,
+    
+    
     // 主题配置
     // theme:'',
     themeConfig: {
@@ -30,7 +36,6 @@ module.exports = {
         nav: navConfig,
         sidebar: sideBarConfig,
     },
-
     plugins: pluginConfig,
     //webpack配置
     configureWebpack: (config, isServer) => {
@@ -40,6 +45,8 @@ module.exports = {
     },
     chainWebpack: (config, isServer) => {
     },
+    
+    
     //浏览器兼容性
     evergreen: true
 

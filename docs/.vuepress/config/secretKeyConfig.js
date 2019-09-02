@@ -2,6 +2,7 @@
 module.exports = {
     ga: 'UA-146856588-1',
     algoliaApiKey: '',
-    algoliaIndexName: ''
-
+    algoliaIndexName: '',
+    githubClientId: '3b268d2d64f97a653d67',
+    githubClientSecret: '11ec67684c58e0bc06bea918bc89508d421b0910'
 }
