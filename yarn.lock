@@ -956,6 +956,13 @@
   dependencies:
     cross-spawn "^6.0.5"
 
+"@vuepress/plugin-medium-zoom@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.npm.taobao.org/@vuepress/plugin-medium-zoom/download/@vuepress/plugin-medium-zoom-1.0.0-rc.1.tgz#78b81aad55621cf192667421eb73497cfe265068"
+  integrity sha1-eLgarVViHPGSZnQh63NJfP4mUGg=
+  dependencies:
+    medium-zoom "^0.4.0"
+
 "@vuepress/plugin-nprogress@^1.0.3":
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.0.3.tgz#a0d6913193c933171b4695bf153efb0c29a76421"
@@ -5183,6 +5190,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+medium-zoom@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npm.taobao.org/medium-zoom/download/medium-zoom-0.4.0.tgz#8e13c9b754903c0c903220611af0d3cd373a4222"
+  integrity sha1-jhPJt1SQPAyQMiBhGvDTzTc6QiI=
 
 mem@^4.0.0:
   version "4.3.0"

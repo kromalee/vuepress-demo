@@ -8,8 +8,8 @@ const searchConfig = require('./config/searchConfig.js')
 const gitConfig = require('./config/gitConfig.js')
 
 module.exports = {
-    
-    
+
+
     //基本配置
     base: '/',
     title: 'vuepress example',
@@ -17,16 +17,15 @@ module.exports = {
     head: headConfig,
     host: '0.0.0.0',
     port: 8091,
-    ga: secretKeyConfig.ga,
     serviceWorker: false,
     locales: undefined,
     shouldPrefetch: () => true,
-    
-    
+
+
     // markdown配置
     markdown: markdownConfig,
-    
-    
+
+
     // 主题配置
     // theme:'',
     themeConfig: {
@@ -34,7 +33,15 @@ module.exports = {
         ...searchConfig,
         displayAllHeaders: true,
         nav: navConfig,
-        sidebar: sideBarConfig,
+        ...sideBarConfig,
+        serviceWorker: {
+            updatePopup: true // Boolean | Object, 默认值是 undefined.
+            // 如果设置为 true, 默认的文本配置将是: 
+            // updatePopup: { 
+            //    message: "New content is available.", 
+            //    buttonText: "Refresh" 
+            // }
+        }
     },
     plugins: pluginConfig,
     //webpack配置
@@ -45,8 +52,8 @@ module.exports = {
     },
     chainWebpack: (config, isServer) => {
     },
-    
-    
+
+
     //浏览器兼容性
     evergreen: true
 

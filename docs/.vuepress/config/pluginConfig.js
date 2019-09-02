@@ -1,5 +1,6 @@
 const secretKeyConfig = require('./secretKeyConfig.js')
-const gitConfig = require('./gitConfig')
+const gitConfig = require('./gitConfig.js')
+const searchConfig = require('./searchConfig.js')
 module.exports = {
     //代码片段插件
     'demo-code': {
@@ -24,6 +25,22 @@ module.exports = {
         },
         demoCodeMark: 'demo-code',
     },
+    //google 分析插件
+    '@vuepress/google-analytics':
+    {
+        'ga': secretKeyConfig.ga
+    },
+    //图像缩放插件
+    '@vuepress/medium-zoom': {
+        // selector: 'img.zoom-custom-imgs',
+        // medium-zoom options here
+        // See: https://github.com/francoischalifour/medium-zoom#options
+        options: {
+            margin: 16
+        }
+    },
+    //自动追踪侧边栏插件
+    '@vuepress/active-header-links': true,
     // back to top 插件
     '@vuepress/back-to-top': true,
     // 评论插件
@@ -32,9 +49,15 @@ module.exports = {
         platform: 'github',
         // 其他的 Vssue 配置
         owner: gitConfig.repo.split('/')[0],
-        repo: gitConfig.repo,
+        repo: gitConfig.repo.split('/')[1],
         clientId: secretKeyConfig.githubClientId,
         clientSecret: secretKeyConfig.githubClientSecret,
     },
+    //PWA插件
+    '@vuepress/pwa': {
+        serviceWorker: true,
+        updatePopup: true
+    },
+    '@vuepress/search': searchConfig
 }
 
