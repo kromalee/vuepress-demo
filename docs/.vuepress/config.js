@@ -11,7 +11,7 @@ module.exports = {
 
 
     //基本配置
-    base: '/',
+    base: '/vuepressDemo/',
     title: 'vuepress example',
     description: 'vuepress example',
     head: headConfig,
