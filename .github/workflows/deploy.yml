@@ -1,4 +1,4 @@
-name: deploy CI
+name: vuepress Document Deploy CI
 
 on: [push]
 
@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install
       run: |
         npm install
     - name: run deploy.sh
@@ -26,5 +26,7 @@ jobs:
       env: 
         PAGE_REPO: ${{github.repository}}
         PAGE_BRAN: ${{ 'gh-pages' }}
-        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-      
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        C_NAME: ${{ 'vuepress-demo.kromalee.xyz' }}
+        USER_NAME: ${{'github-actions-ci'}}
+        USER_MAIL: ${{'h694251068k@163.com'}}
