@@ -1,7 +1,5 @@
-name:document deploy CI
-
+name: deploy CI
 on: [push]
-
 jobs:
   build:
 
