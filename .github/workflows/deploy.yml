@@ -23,8 +23,13 @@ jobs:
     - name: run deploy.sh
       run: |
         sh deploy.sh
+    - name: deploy
+      run: git push -f https://@github.com/$PAGE_REPO master:$PAGE_BRAN
+      with:
+        Username: ${{ 'h69251068k@163.com' }}
+        Password: ${{ 'GITHUB_TOKEN' }}
       env: 
         PAGE_REPO: ${{github.repository}}
         PAGE_BRAN: ${{ 'gh-pages' }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       
