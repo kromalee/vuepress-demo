@@ -1,4 +1,4 @@
-name: Node CI
+name:document deploy CI
 
 on: [push]
 
@@ -9,10 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v1
+    - name: check out!
+      uses: actions/checkout@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -20,7 +23,11 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-    - name: npm install, build, and test
+    - name: run deploy.sh
       run: |
         sh deploy.sh
+      env: 
+        PAGE_REPO: ${{github.repository}}$ 
+        PAGE_BRAN: ${{ 'gh-pages' }}
+
       

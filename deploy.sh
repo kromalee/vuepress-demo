@@ -16,10 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果发布到 https://<USERNAME>.github.io
-# git push
+# 提供gitpush的环境
+
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:kromalee/vuepress-demo.git master:gh-pages
+git push -f git@github.com:$PAGE_REPO.git master:gh-pages
 
 cd -
