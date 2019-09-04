@@ -26,5 +26,5 @@ jobs:
       env: 
         PAGE_REPO: ${{github.repository}}$ 
         PAGE_BRAN: ${{ 'gh-pages' }}
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.MY_TOKEN }}
       
