@@ -24,7 +24,7 @@ jobs:
       run: |
         sh deploy.sh
       env: 
-        PAGE_REPO: ${{github.repository}}$ 
+        PAGE_REPO: ${{github.repository}}
         PAGE_BRAN: ${{ 'gh-pages' }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
