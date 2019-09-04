@@ -20,9 +20,8 @@ git add -A
 git commit -m 'deploy'
 
 # 提供gitpush的环境
-
-
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:$PAGE_REPO.git master:gh-pages
+# git push -f git@github.com:$PAGE_REPO.git master:gh-pages
+git push -f https://$GITHUB_TOKEN@$PAGE_REPO master:$PAGE_BRAN
 
 cd -

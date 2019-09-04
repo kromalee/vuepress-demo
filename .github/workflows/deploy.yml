@@ -1,5 +1,7 @@
-name: deploy CI
+name:deploy CI
+
 on: [push]
+
 jobs:
   build:
 
@@ -10,10 +12,7 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - name: check out!
-      uses: actions/checkout@v1
-      with:
-        token: ${{ secrets.MY_TOKEN }}
+    - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -27,5 +26,5 @@ jobs:
       env: 
         PAGE_REPO: ${{github.repository}}$ 
         PAGE_BRAN: ${{ 'gh-pages' }}
-
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
