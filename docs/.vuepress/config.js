@@ -17,7 +17,6 @@ module.exports = {
     head: headConfig,
     host: '0.0.0.0',
     port: 8091,
-    serviceWorker: false,
     locales: undefined,
     shouldPrefetch: () => true,
 
