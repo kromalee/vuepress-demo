@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
-set -e
+# set -e
 
 git config --global user.email "h694251068k@163.com"
 git config --global user.name "kromalee"
