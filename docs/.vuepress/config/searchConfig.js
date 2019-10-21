@@ -1,4 +1,4 @@
-const secretKeyConfig=require('./secretKeyConfig.js')
+const secretKeyConfig = require('./secretKeyConfig.js')
 module.exports = {
     search: true,
     searchMaxSuggestions: 10,
