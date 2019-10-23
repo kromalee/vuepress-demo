@@ -18,7 +18,7 @@ const findSyncFolderName = startPath => {
   finder(startPath);
   return result;
 };
-const findSyncAllFileAsRelativePathList = startPath => {
+const findSyncAllFileAsRelativePathList = (startPath, parentAbsolutePath) => {
   let result = [];
   function finder(path) {
     const files = fs.readdirSync(path);
@@ -27,7 +27,7 @@ const findSyncAllFileAsRelativePathList = startPath => {
       const fPath = join(path, fileName);
       const stats = fs.statSync(fPath);
       if (stats.isDirectory()) finder(fPath);
-      if (stats.isFile()) result.push(relative(startPath, fPath));
+      if (stats.isFile()) result.push(relative(parentAbsolutePath, fPath));
     });
   }
   finder(startPath);
@@ -40,31 +40,32 @@ const findSyncAllFileAsRelativePathList = startPath => {
  */
 const genSidebarGroupConfig = groupConfig => {
   // 先解构必填参数
-  const { title, relativePath } = groupConfig;
+  const { title, relativePath, parentRelativePath } = groupConfig;
   // 补全非必填参数
   collapsable = groupConfig.collapsable === false ? false : true;
   sidebarDepth = groupConfig.sidebarDepth || 1;
+  isWithReadMe = groupConfig.isWithReadMe ? true : false;
   //生成children
-  // 工作区目录
   const workspace = join(__dirname, "../../");
   const absolutePath = join(workspace, relativePath);
-  const fileNameList = findSyncAllFileAsRelativePathList(absolutePath);
-  // const fileNameList = findSyncFolderName(absolutePath);
+  const parentAbsolutePath = join(workspace, parentRelativePath);
+  const fileNameList = findSyncAllFileAsRelativePathList(
+    absolutePath,
+    parentAbsolutePath
+  );
+  const reverseString = str => [...str].reverse().join("");
   let children = fileNameList
     .filter(item => {
-      return item !== "README.md";
+      return item !== "README.md" && reverseString(item).indexOf("dm.") === 0;
     })
+   
     .map(item => {
       return item.replace(".md", "");
     });
-  //生成path
-
-  //由项目中的相对路径生成vuepress概念中的绝对路径文本
-
+  sidebarConfig = isWithReadMe ? [""].concat(children) : children;
   //生成其他选项
   return {
     title,
-    // path: relativePath,
     collapsable,
     children
   };
@@ -128,7 +129,6 @@ const rearrangeTheSidebars = siteData => {
     _RearrangeTheSidebars(item);
   });
 };
-
 module.exports = {
   findSyncFolderName,
   rearrangeTheSidebars,

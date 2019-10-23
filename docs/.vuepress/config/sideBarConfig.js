@@ -1,6 +1,6 @@
 //侧边栏配置
 
-const utils = require("../utils/utils");
+const { genSidebarGroupConfig } = require("../utils/utils");
 
 /**
  特性:只需关注目录无需关注具体文件
@@ -21,48 +21,53 @@ const utils = require("../utils/utils");
         |---------无分组文件4.md
  */
 const sidebar = {
-    "/guide/": [],
-    "/webApplication/": [
-      utils.genSidebarGroupConfig({
-        groupPath: "/webApplication/",
-        title: "抽象功能",
-        collapsable: true,
-        relativePath: "webApplication/component"
-      }),
-      // utils.genSidebarConfig('test', './docs/webApplication/', true, true),
-      {
-        title: "基础业务",
-        collapsable: true,
-        children: ["base/tg-el-save", "base/tg-el-search", "base/utils"]
-      },
-      {
-        title: "具体业务",
-        collapsable: true,
-        children: []
-      },
-      {
-        title: "工程工具",
-        collapsable: true,
-        children: ["tools/code-maker", "tools/docs"]
-      }
-    ],
-    "/dataService/": ["be1", "be2"],
-    "/flowEngine/": [
-      {
-        title: "状态型流程框架",
-        collapsable: true,
-        children: [
-          "/flowEngine/statusflow/statusflow-guide",
-          "/flowEngine/statusflow/statusflow-apis",
-          "/flowEngine/statusflow/statusflow-config",
-          "/flowEngine/statusflow/statusflow-best-practice",
-          "/flowEngine/statusflow/statusflow-spec"
-        ]
-      }
-    ],
-    "/contribute/": ["con1", "con2"]
-  }
+  "/guide/": [],
+  "/webApplication/": [
+    genSidebarGroupConfig({
+      title: "抽象功能",
+      collapsable: true,
+      relativePath: "webApplication/component",
+      parentRelativePath: "webApplication"
+    }),
+    genSidebarGroupConfig({
+      title: "基础业务",
+      collapsable: true,
+      relativePath: "webApplication/base",
+      parentRelativePath: "webApplication"
+    }),
+    genSidebarGroupConfig({
+      title: "具体业务",
+      collapsable: true,
+      relativePath: "webApplication/business",
+      parentRelativePath: "webApplication"
+    }),
+    genSidebarGroupConfig({
+      title: "工程工具",
+      collapsable: true,
+      relativePath: "webApplication/tools",
+      parentRelativePath: "webApplication"
+    })
+  ],
+  "/dataService/": [
+    genSidebarGroupConfig({
+      title: "数据服务",
+      collapsable: true,
+      relativePath: "/dataService/",
+      parentRelativePath: "/dataService/"
+    })
+  ],
+
+  "/flowEngine/": [
+    genSidebarGroupConfig({
+      title: "状态型流程框架",
+      collapsable: true,
+      relativePath: "/flowEngine/statusflow/",
+      parentRelativePath: "/flowEngine/"
+    })
+  ],
+  "/contribute/": ["con1", "con2"]
 };
+console.log(sidebar);
 module.exports = {
   sidebar: sidebar
 };
