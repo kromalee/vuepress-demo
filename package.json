@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:debug":"vuepress dev docs --debug"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,7 @@
     "@vuepress/plugin-pwa": "^1.0.3",
     "axios": "0.18.1",
     "element-ui": "^2.12.0",
-    "vuepress": "^1.0.3",
+    "vuepress": "^1.2.0",
     "vuepress-plugin-demo-code": "^0.3.5",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-pangu": "^1.0.1",

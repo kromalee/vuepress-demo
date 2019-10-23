@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Element from 'element-ui'
+import Vue from "vue";
+import Element from "element-ui";
 
-import 'element-ui/lib/theme-chalk/index.css'
+import "element-ui/lib/theme-chalk/index.css";
 
 // const utils = require('docs/.vuepress/utils/utils.js')
 
@@ -13,6 +13,6 @@ export default ({
 }) => {
   /* @tip: 可以在此，做一些其他的应用级别的优化 */
 
-  Vue.use(Element)
+  Vue.use(Element);
   // utils.rearrangeTheSidebars(siteData)
-}
+};
