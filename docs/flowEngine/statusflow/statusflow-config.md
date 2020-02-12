@@ -34,8 +34,8 @@
         "value":String,  //路径选择,节点变量提交值(文本型) 有表达式时必填
         "desc": String     //路径选择,界面渲染值 有表达式时必填
 
-        //业务办理表单相关
-        "handleRoute":String,//业务表单页面,可选,默认没有业务表单
+        //业务办理表单相关,配置自定义表单页面路由
+        "handleRoute":String,//业务表单页面,可选,默认没有业务表单,参考示例 /workflow/statusHandle/handle
         
         //意见相关配置
         "defaultComment":String,//默认意见,默认除了驳回不通过时显示不同意,其余显示同意,可以配置一个 null 来替换默认的意见
@@ -45,6 +45,7 @@
         //办理人相关配置
         "hideTaskUser":Boolean,//隐藏下一步办理人,默认是false,可选
         "actorLabel":"下一步办理人", //下步办理人提示输入标签
+    	"commentLabel":"办理意见"
         "anyActor":false ,//任意角色选择
         //部门选择树配置JSON scheme
         "anyActorDeptScheme":{
@@ -67,7 +68,7 @@
         "value": "true",  //路径选择,节点变量提交值(文本型) 有表达式时必填
         "desc": "通过"     //路径选择,界面渲染值 有表达式时必填
 
-        "defaultComment":"测试默认意见"//默认意见,默认除了驳回不通过时显示不同意,其余显示同意,可以配置一个空格来替换默认的意见
+        "defaultComment":"测试默认意见"
         "handleRoute":""//业务表单页面,可选,默认没有业务表单
         "hideTaskUser":true//是否隐藏下一步办理人,默认是false,可选
         "hideComment":true //是否隐藏意见,默认是false,可选
