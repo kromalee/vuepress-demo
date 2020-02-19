@@ -8,7 +8,7 @@ const gitConfig = require("./config/gitConfig.js");
 
 module.exports = {
   //基本配置
-  base: "/",
+  base: "/vuepress-demo/",
   title: "vuepress example",
   description: "vuepress example",
   head: headConfig,
