@@ -20,9 +20,9 @@ jobs:
     - name: npm install
       run: |
         npm install
-    - name: run deploy.sh
+    - name: 运行自动发布脚本
       run: |
-        sh deploy.sh
+        sh auto-deploy.sh
       env: 
         PAGE_REPO: ${{github.repository}}
         PAGE_BRAN: ${{ 'gh-pages' }}
