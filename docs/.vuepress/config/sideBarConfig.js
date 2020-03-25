@@ -46,7 +46,13 @@ const sidebar = {
       collapsable: true,
       relativePath: "webApplication/tools",
       parentRelativePath: "webApplication"
-    })
+    }),
+     genSidebarGroupConfig({
+      title: "项目培训",
+      collapsable: true,
+      relativePath: "webApplication/train",
+      parentRelativePath: "webApplication"
+    }),
   ],
   "/dataService/": [
     genSidebarGroupConfig({
