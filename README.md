@@ -58,6 +58,7 @@
 - [ ] 支持markdown之外的知识形式
 
 - [ ] i18n 国际化
+- [ ] 文档内容保护(参考:https://yuchengkai.cn/docs/frontend/#typeof) 
 
 ### 工程化
 
