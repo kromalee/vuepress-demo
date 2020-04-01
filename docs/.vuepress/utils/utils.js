@@ -8,7 +8,7 @@ const findSyncFolderName = startPath => {
   function finder(path) {
     const files = fs.readdirSync(path);
     files.forEach((fileName, index) => {
-      console.log(fileName, index);
+      // console.log(fileName, index);
       const fPath = join(path, fileName);
       const stats = fs.statSync(fPath);
       if (stats.isDirectory()) finder(fPath);
@@ -23,11 +23,11 @@ const findSyncAllFileAsRelativePathList = (startPath, parentAbsolutePath) => {
   function finder(path) {
     const files = fs.readdirSync(path);
     files.forEach((fileName, index) => {
-      console.log(fileName, index);
+      // console.log(fileName, index);
       const fPath = join(path, fileName);
       const stats = fs.statSync(fPath);
       if (stats.isDirectory()) finder(fPath);
-      if (stats.isFile()) result.push(relative(parentAbsolutePath, fPath));
+      if (stats.isFile()) result.push(posix.relative(parentAbsolutePath, fPath));
     });
   }
   finder(startPath);

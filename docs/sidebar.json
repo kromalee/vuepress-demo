@@ -1,0 +1,77 @@
+{
+    "/guide/": [
+        ""
+    ],
+    "/web-application/": [
+        "",
+        {
+            "title": "抽象功能",
+            "sidebarDepth": 0,
+            "children": [
+                "component/component",
+                "component/tg-el-tree-select",
+                "component/tg-el-eject-iframe"
+            ]
+        },
+        {
+            "title": "基础业务",
+            "sidebarDepth": 0,
+            "children": [
+                "base/resource-config",
+                "base/tg-el-save",
+                "base/tg-el-search",
+                "base/easy-table",
+                "base/utils",
+                "base/business-reminder-framework"
+            ]
+        },
+        {
+            "title": "具体业务",
+            "sidebarDepth": 0,
+            "children": [
+                "business/null"
+            ]
+        },
+        {
+            "title": "前端培训",
+            "sidebarDepth": 0,
+            "children": [
+                "train/front-first-step",
+                "train/front-guide"
+            ]
+        },
+        {
+            "title": "工程工具",
+            "sidebarDepth": 0,
+            "children": [
+                "tools/docs",
+                "tools/code-maker",
+                "tools/style-management"
+            ]
+        }
+    ],
+    "/data-service/": [
+        "",
+        {}
+    ],
+    "/flow-engine/": [
+        "",
+        {
+            "title": "状态型工作流",
+            "sidebarDepth": 0,
+            "children": [
+                "statusflow/statusflow-guide",
+                "statusflow/statusflow-config",
+                "statusflow/statusflow-apis2",
+                "statusflow/statusflow-apis",
+                "statusflow/statusflow-best-practice",
+                "statusflow/statusflow-spec"
+            ]
+        }
+    ],
+    "/contribute/": [
+        "",
+        ["doc-rulses","test"],
+        "vue-component-demo"
+    ]
+}

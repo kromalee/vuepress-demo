@@ -5,7 +5,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:debug":"vuepress dev docs --debug"
+    "docs:debug": "vuepress dev docs --debug"
   },
   "keywords": [],
   "author": "",
