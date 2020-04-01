@@ -13,18 +13,4 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan  You
 ---
 
-::: demo-code vue
-<template>
-    <button @click="onClick">Click me!</button>
-</template>    
-
-<script>
-export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
-}
-</script>
-:::
-
 <Vssue title="Vssue Demo" />
