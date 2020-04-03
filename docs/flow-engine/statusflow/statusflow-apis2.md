@@ -2,7 +2,7 @@
 
 > 工具类调用流程框架,直接调用对应类的构造函数即可 static/js/util/statusFlowMethod.ts
 
-## 类型说明(为了方便维护,详见代码注释)
+## 类型说明(为了方便维护,详见代码注释@ static/js/util/statusFlowMethod.ts)
 
 ## 发起 StatusFlowStartUI
 

@@ -114,14 +114,8 @@
 :::
 ### 2.3 配置节点权限
 > 节点配置保存后才可以配置权限
-- 固定配置人(配置以下两项即可)
-![1565081449098](./statusflow-config.assets/1565081449098.png)
-
-- 从业务数据取人(需要配置以下两项及 从**业务内取人的API**)
-![1565081504720](./statusflow-config.assets/1565081504720.png)
 
 :::tip
-
  通用从业务内取人API: ~~/base~~`/statusFlowEngine/getBusinessActor`
-
 :::
+![人员权限配置](./auth-config.png)
