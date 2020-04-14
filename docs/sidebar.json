@@ -51,7 +51,8 @@
         }
     ],
     "/data-service/": [
-        ""
+        "",
+        "sc"
     ],
     "/flow-engine/": [
         "",
