@@ -448,7 +448,7 @@ public interface SingleDao {
        protected MetadataConfigClient metadataConfigClient;
        @Autowired
        protected PolymerizeDataService polymerizeDataService;
-   ```
+
 
 
        @RequestMapping(value = "get", method = RequestMethod.GET)
