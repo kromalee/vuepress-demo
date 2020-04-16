@@ -437,7 +437,7 @@ public interface SingleDao {
 
 2) 针对 togest-persist 定义了抽象的 WEB 层，包括 AbstractBaseController(部门控制权限)、AbstractController(支持导入导出)、AbstractBaseSectionController(段控制权限)、AbstractSectionController(段控制权限，支持导入导出)
 
-   ```java
+```java
    public abstract class AbstractBaseSectionController<T extends DataCommonEntity, S extends ICrudCommonService<T>> {
 
        @Autowired
@@ -541,10 +541,8 @@ public interface SingleDao {
 
 
        public abstract String getResourceCode();
-
 }
-
-	```
+```
 
 ```java
 public abstract class AbstractController<T extends DataCommonEntity, S extends ICrudCommonService<T>, I extends ConfigExcelImportService<T>>
