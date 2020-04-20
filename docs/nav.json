@@ -16,12 +16,11 @@
         "link": "/flow-engine/"
     },
     {
-        "text": "其他",
-        "items": [
-            {
-                "text": "贡献指南",
-                "link": "/contribute/"
-            }
-        ]
+        "text":"大屏",
+        "link":"/business-intelligence/"
+    },
+    {
+        "text": "贡献",
+        "link": "/contribute/"
     }
 ]

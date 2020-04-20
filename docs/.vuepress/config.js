@@ -9,8 +9,8 @@ const gitConfig = require("./config/gitConfig.js");
 module.exports = {
   //基本配置
   base: "/vuepress-demo/",
-  title: "vuepress example",
-  description: "vuepress example",
+  title: "togest platform docs",
+  description: "togest platform docs",
   head: headConfig,
   host: "0.0.0.0",
   port: 8091,
@@ -36,7 +36,7 @@ module.exports = {
       // 修改客户端的 webpack 配置
     }
   },
-  chainWebpack: (config, isServer) => {},
+  chainWebpack: (config, isServer) => { },
 
   //浏览器兼容性
   evergreen: true
