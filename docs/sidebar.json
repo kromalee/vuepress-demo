@@ -11,7 +11,7 @@
             "title": "抽象功能",
             "sidebarDepth": 0,
             "children": [
-                "togestui-components",
+                "component/togestui-components",
                 "component/component",
                 "component/tg-el-tree-select",
                 "component/tg-el-eject-iframe"
