@@ -235,6 +235,9 @@ require(['/js/config/requireConfig.js'], function (config) {
 
 #### 3.6.3 模式三: 左右主从列表及检索
 
+#### 3.6.5 模式四: 一主表对多从表
+
+
 ### 3.7 新增编辑页
 
 #### 3.7.1 基于`TgElSave`组件的元数据驱动的新增编辑页面
