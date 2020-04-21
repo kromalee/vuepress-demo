@@ -81,6 +81,7 @@ public class example {
         model.addAttribute("data", HandleParamsUtil.formParamRequestTryData(entity));
         return "comprehensive/example/detail";
     }
+}
 ```
 
 
