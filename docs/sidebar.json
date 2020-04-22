@@ -11,14 +11,16 @@
             "title": "抽象功能",
             "sidebarDepth": 0,
             "children": [
-                "component/togestui-components",
-                "component/component",
-                "component/tg-el-tree-select",
-                "component/tg-el-eject-iframe"
+                "lib/vue-doc",
+                "lib/element-ui-doc",
+                "lib/togestui-components",
+                "lib/component",
+                "lib/tg-el-tree-select",
+                "lib/tg-el-eject-iframe"
             ]
         },
         {
-            "title": "基础业务",
+            "title": "平台服务",
             "sidebarDepth": 0,
             "children": [
                 "base/resource-config",
@@ -30,14 +32,14 @@
             ]
         },
         {
-            "title": "具体业务",
+            "title": "业务实践",
             "sidebarDepth": 0,
             "children": [
-                "business/null"
+                "business/list-page-best-practice"
             ]
         },
         {
-            "title": "前端培训",
+            "title": "前端培训(迁移到指南)",
             "sidebarDepth": 0,
             "children": [
                 "train/front-first-step",
@@ -48,9 +50,9 @@
             "title": "工程工具",
             "sidebarDepth": 0,
             "children": [
-                "tools/docs",
-                "tools/code-maker",
-                "tools/style-management"
+                "tool/docs",
+                "tool/code-maker",
+                "tool/style-management"
             ]
         }
     ],

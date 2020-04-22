@@ -1,7 +1,9 @@
 ---
 sidebarDepth: 3
 ---
-# 前端入门教程
+# EMIS8000系统-前端入门教程
+
+[[TOC]]
 
 ## 1. 课前准备
 ### 1.1 我们会做出什么东西?
@@ -28,7 +30,7 @@ sidebarDepth: 3
 - 明确的菜单设计,包括模块归属及左侧菜单树的结构和各个按钮的设计
 - 明确的字段设计,需要知道列表,新增,编辑,详情等各个状态字段的状态及其中的关联逻辑
 
-### 3.2 新增菜单和按钮
+### 3.2 配置菜单和按钮权限树->后端路由
 
 > `系统设置>权限设置管理>菜单管理`
 
@@ -39,13 +41,15 @@ sidebarDepth: 3
 - 在角色管理例中给登陆人配置刚才的菜单权限![1587364601761](./web-application-guide.assets/1587364601761.png)
 - 配置完成退出重新进入业务功能查看,发现菜单已经正常显示了
 - 菜单1.2 和1.3由于内部**没有任何可用的权限**,因此是隐藏的![1587364814184](./web-application-guide.assets/1587364814184.png)
+- 简化方案:新增功能点
 
 #### 3.2.2 指定一个嵌入的页面
 - 菜单树里页面对应右侧空白区域一个嵌入的iframe页面,这个页面通过后端路由地址渲染出来
 - 该地址通过 菜单表单里的**后端路由**来设置指定的页面![1587367084387](./web-application-guide.assets/1587367084387.png)
 
-### 3.3 新增路由控制器
+### 3.3 后端路由->路由控制器->模板HTML->脚本JS
 
+#### 3.3.1 新建路由控制器文件
 > 在`src/main/java/com.togest.web`添加控制器文件,按照功能模块位置决定代码文件的位置
 
 -  注意:模板html页面一定不能是绝对路径,部署在Linux服务器上时,会找不到模板文件
@@ -84,11 +88,7 @@ public class example {
 }
 ```
 
-
-
-### 3.4 新增界面html模板及js文件
-
-#### 3.4.1 `thymeleaf` 模板
+#### 3.3.2 `thymeleaf` 模板
 - 模板文件放在`src/main/resources/templates`下与功能对应的目录下
 - script使用require.js引入对应的功能JavaScript代码
 - 注意script使用特殊的`thymeleaf`语法处理JavaScript代码的缓存问题
@@ -127,13 +127,14 @@ public class example {
 <body>
 <div id="app"
      v-cloak>
+     <h1>页面页面</h1> 
 </div>
 </body>
     
 </html>
 ```
 
-#### 3.4.2  javascript文件
+#### 3.3.3  `javascript` 脚本
 
 > 写大部分业务逻辑的位置
 
@@ -154,17 +155,18 @@ public class example {
 
 ```javascript
 require(['/js/config/requireConfig.js'], function (config) {
-    //依赖
-    require([], function (/*依赖导入一个变量(可选)*/) {
+    require([/*依赖*/], function (/*依赖导入一个变量(可选)*/) {
     });
 });
 ```
 
-### 3.5 新增api,service
+### 3.5 获取数据:api,service,元数据,主数据介绍
 
 >  处理与后端的交互,按模块分开,一般不需要根据业务细分,同一个模块写在一起
 
-#### 3.5.1 API 文件
+#### 3.5.1 swagger接口文档
+
+#### 3.5.2 API 文件
 - 位置:`/src/main/resources/static/js/api/`
 - 标准格式如下
 ```javascript
@@ -199,12 +201,12 @@ require(['/js/config/requireConfig.js'], function (config) {
 
 
 
-#### 3.5.2 service 文件
+#### 3.5.3 service 文件
 
 - 位置:`/src/main/resources/static/js/service/`
 - 根据api文件生成可以执行的函数,函数签名与api的对象名称一致
 
-### 3.6 列表页
+### 3.6 典型列表页
 
 > 基于`EasyTable`组件的元数据驱动的新增编辑页面
 
@@ -232,21 +234,23 @@ require(['/js/config/requireConfig.js'], function (config) {
 
 ```
 
-#### 3.6.2 模式二:左树右列表(分类-项目主从表)及检索
-
-#### 3.6.3 模式三: 左右主从列表及检索
-
-#### 3.6.5 模式四: 一主表对多从表
+#### 3.6.2 其他模式:详见 [列表页-最佳实践](../web-application/business/list-page-best-practice.md)
 
 
-### 3.7 新增编辑页
+### 3.7 典型新增编辑页
 
 #### 3.7.1 基于`TgElSave`组件的元数据驱动的新增编辑页面
 
-### 3.8 详情页
+### 3.8 典型详情页
 
 #### 3.8.1 基于`TgCompDetail`组件的元数据驱动的详情页面
 
+### 3.9 其他页面
+- 应该使用以下资源来构建功能
+    - [抽象功能]()
+    - [平台服务]()
+    - [流程框架]()
+    - [数据大屏]() 
 
 ## 4. 打包发布
 
@@ -255,3 +259,5 @@ require(['/js/config/requireConfig.js'], function (config) {
 ### 4.2 发布到开发服务器
 
 ### 4.3 提交测试
+
+### 4.4 追踪缺陷
