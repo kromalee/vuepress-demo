@@ -9,8 +9,8 @@ const gitConfig = require("./config/gitConfig.js");
 module.exports = {
   //基本配置
   base: "/vuepress-demo/",
-  title: "togest platform docs",
-  description: "togest platform docs",
+  title: "Togest Developers",
+  description: "Build anything with this platform",
   head: headConfig,
   host: "0.0.0.0",
   port: 8091,
