@@ -2,15 +2,7 @@
 sidebarDepth: 2
 ---
 # 后端开发手册
-<style>
-.table-of-contents {
-    position: fixed;
-    right: 0;
-    top: 100px;
-    overflow: auto;
-    height: 600px;
-}
-</style>
+
 
 [[TOC]]
 
