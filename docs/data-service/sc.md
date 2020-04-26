@@ -1,6 +1,8 @@
 ---
 sidebarDepth: 4
 ---
+[[TOC]]
+
 # 后端开发手册
 
 ## 1.EMIS8000 系统
