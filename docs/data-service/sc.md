@@ -1,8 +1,6 @@
 ---
-sidebarDepth: 4
+sidebarDepth: 3
 ---
-[[TOC]]
-
 # 后端开发手册
 
 ## 1.EMIS8000 系统
@@ -3076,6 +3074,7 @@ String generateFormNo(String  businessKey,OrderFormNo orderFormNo);
 | 4    | getRandomLength() | int    | 随机数长度，不使用可以默认 0                                                    |
 | 5    | getTotalLength()  | int    | 总长度=单据号前缀+日期+流水号+随机数长度                                        |
 | 6    | getCacheDays()    | int    | 缓存失效天数。注意失效天数，要设置合理。要不会导致 KEY 不存在，导致产生单号重复 |
+| 7    | getInitValue()    | long   | 生成单号的初始值；默认0 |
 
 **业务使用规则实现定义**
 
