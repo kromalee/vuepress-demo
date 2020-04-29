@@ -52,7 +52,7 @@ Spring Cloud 是构建 Spring Boot 分布式环境，也就是常说的云应用
 Spring Boot 中流砥柱，承上启下
 ```
 
-![1588139569314](data-service-guide.assets/1588139569314.png)
+![1588139569314](./data-service-guide.assets/1588139569314.png)
 
 ### 1.3、spring could简介
 
