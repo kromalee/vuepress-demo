@@ -11,7 +11,7 @@ sidebarDepth: 3
 ### 1.1、前置知识
 
 1. 熟练使用掌握java知识
-2. 熟悉数据库mysql、pg等
+2. 熟悉数据库mysql、PostgreSQL等
 3. 熟悉使用springboot+mybatis+maven框架
 4. 熟悉使用svn、maven打包
 
@@ -26,9 +26,20 @@ sidebarDepth: 3
 
 ## 2、知识简介
 
-### 1.1、java知识（[地址](https://www.runoob.com/java/java-basic-datatypes.html)）
+### 1.1、Java 教程
 
-### 1.2、spring boot简介
+> https://www.runoob.com/java/java-basic-datatypes.html
+
+<iframe src="https://www.runoob.com/java/java-basic-datatypes.html" width="100%" height="800px"></iframe>
+### 1.2、Maven 教程
+> https://www.runoob.com/maven/maven-tutorial.html
+
+<iframe src="https://www.runoob.com/maven/maven-tutorial.html" width="100%" height="800px"></iframe>
+### 1.3、MySQL 教程
+> https://www.runoob.com/mysql/mysql-tutorial.html
+
+<iframe src="https://www.runoob.com/mysql/mysql-tutorial.html" width="100%" height="800px"></iframe>
+### 1.4、spring boot简介
 
 1、SpringBoot简介
 
@@ -60,7 +71,7 @@ Spring Boot 中流砥柱，承上启下
 
 ![1588139569314](./data-service-guide.assets/1588139569314.png)
 
-### 1.3、spring could简介
+### 1.5、spring could简介
 
 1、什么是SpringCloud
 
@@ -84,7 +95,7 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
     服务网关 —— Netflix Zuul
     分布式配置 —— Spring Cloud Config
     消息总线 —— Spring Cloud Bus
-### 1.4、
+### 1.6、
 
 ## 3、业务实例
 
