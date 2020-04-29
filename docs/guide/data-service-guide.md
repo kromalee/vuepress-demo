@@ -86,27 +86,27 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
 1. 层次结构：domain（实体）、dao（ 数据访问层 ）、service（ 业务逻辑层 ）、web（控制层）
 
-   ![1588141412542](data-service-guide.assets/1588141412542.png)
+   ![1588141412542](./data-service-guide.assets/1588141412542.png)
 
 2. domain（实体）
 
-   ![1588141862634](data-service-guide.assets/1588141862634.png)
+   ![1588141862634](./data-service-guide.assets/1588141862634.png)
 
 3. dao（ 数据访问层 ）
 
-   ![1588141897645](data-service-guide.assets/1588141897645.png)
+   ![1588141897645](./data-service-guide.assets/1588141897645.png)
 
-   ![1588141917587](data-service-guide.assets/1588141917587.png)
+   ![1588141917587](./data-service-guide.assets/1588141917587.png)
 
 4. service（ 业务逻辑层 ）
 
-   ![1588141961821](data-service-guide.assets/1588141961821.png)
+   ![1588141961821](./data-service-guide.assets/1588141961821.png)
 
-   ![1588142003994](data-service-guide.assets/1588142003994.png)
+   ![1588142003994](./data-service-guide.assets/1588142003994.png)
 
 5. web（控制层）
 
-   ![1588142046553](data-service-guide.assets/1588142046553.png)
+   ![1588142046553](./data-service-guide.assets/1588142046553.png)
 
 6. 
 
