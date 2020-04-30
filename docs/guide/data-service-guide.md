@@ -20,9 +20,10 @@ sidebarDepth: 3
 1. 安装jdk1.8 
 2. 安装svn
 3. 安装idea
-4. 下载Lombok插件
-5. 使用svn下载项目
-6. idea导入项目
+4. 安装maven
+5. 下载Lombok插件
+6. 使用svn下载项目
+7. idea导入项目
 
 ## 2、知识简介
 
@@ -31,19 +32,16 @@ sidebarDepth: 3
 > https://www.runoob.com/java/java-basic-datatypes.html
 
 <iframe src="https://www.runoob.com/java/java-basic-datatypes.html" width="100%" height="800px"></iframe>
-
 ### 1.2、Maven 教程
 
 > https://www.runoob.com/maven/maven-tutorial.html
 
 <iframe src="https://www.runoob.com/maven/maven-tutorial.html" width="100%" height="800px"></iframe>
-
 ### 1.3、MySQL 教程
 
 > https://www.runoob.com/mysql/mysql-tutorial.html
 
 <iframe src="https://www.runoob.com/mysql/mysql-tutorial.html" width="100%" height="800px"></iframe>
-
 ### 1.4、spring boot简介
 
 1、SpringBoot简介
@@ -104,7 +102,31 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
 ## 3、业务实例
 
-### 3.1、业务层次
+### 3.1、代码生成
+
+#### 3.1.1、生成代码
+
+![1588225952169](./data-service-guide.assets/1588225952169.png)
+
+直接放到项目中使用
+
+![1588227980699](./data-service-guide.assets/1588227980699.png)
+
+#### 3.1.2、生成资源
+
+![1588227544115](./data-service-guide.assets/1588227544115.png)
+
+生成的excel可以在资源管理中导入
+
+![1588228098911](./data-service-guide.assets/1588228098911.png)
+
+![1588228028761](./data-service-guide.assets/1588228028761.png)
+
+
+
+
+
+### 3.2、业务层次
 
 1. 层次结构：domain（实体）、dao（ 数据访问层 ）、service（ 业务逻辑层 ）、web（控制层）
 
@@ -120,7 +142,7 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
    ![1588141917587](./data-service-guide.assets/1588141917587.png)
 
-4. service（ 业务逻辑层 ）
+4. service（ 业务逻辑层 ）：可以补充其他业务操作
 
    ![1588141961821](./data-service-guide.assets/1588141961821.png)
 
