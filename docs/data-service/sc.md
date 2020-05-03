@@ -12,7 +12,7 @@ sidebarDepth: 2
 
 ### 1.1 系统架构
 
-​ 应用软件平台采用微服务体系架构，建设以 SpringCloud、Docker、Jenkins 软件为基础的一套可以自动配置、注册、发布、服务、测试的可持续集成服务容器平台。应用平台软件架构如下图。
+ 应用软件平台采用微服务体系架构，建设以 SpringCloud、Docker、Jenkins 软件为基础的一套可以自动配置、注册、发布、服务、测试的可持续集成服务容器平台。应用平台软件架构如下图。
 
 ![jg](./sc.assets/jg.png)
 
@@ -34,7 +34,7 @@ sidebarDepth: 2
 
 ### 2.1 元数据
 
-​ 元数据定义了所有业务的元数据模型，比如人员管理，定义了人员管理的属性及扩展属性。整个平台以元数据为驱动，前端用元数据实现 CRUD, 后端用元数据实现数据聚合、封装、导入及导出。元数据主要有元数据主表、元数据属性构成，数据模型及 UI 如下：
+ 元数据定义了所有业务的元数据模型，比如人员管理，定义了人员管理的属性及扩展属性。整个平台以元数据为驱动，前端用元数据实现 CRUD, 后端用元数据实现数据聚合、封装、导入及导出。元数据主要有元数据主表、元数据属性构成，数据模型及 UI 如下：
 
 **元数据**
 
@@ -95,17 +95,17 @@ sidebarDepth: 2
 
 ### 2.2 CRUD
 
-​ 平台的增删改查使用的 Mybatis 框架，针对数据库的操作我们开发了 togest-domain、togest-persist、togest-cms-crud、togest-cms-crud-web 模块。
+ 平台的增删改查使用的 Mybatis 框架，针对数据库的操作我们开发了 togest-domain、togest-persist、togest-cms-crud、togest-cms-crud-web 模块。
 
 #### 2.2.1 togest-domain
 
-​ togest-domain 定义通用的些实体，包括 BaseCommonEntity、DataCommonEntity、TreeCommonEntity、Page、PageData、DeleteVo、UpdateVo、InsertVo、QueryVo 等，另外 IdGen 也在此模块中，完成 UUID 生成。
+ togest-domain 定义通用的些实体，包括 BaseCommonEntity、DataCommonEntity、TreeCommonEntity、Page、PageData、DeleteVo、UpdateVo、InsertVo、QueryVo 等，另外 IdGen 也在此模块中，完成 UUID 生成。
 
 #### 2.2.2 togest-persist
 
-​ CRUD 骨架，定义了单表操作(SingleDao)、CrudCommonDao、TreeCommonDao、ICrudCommService、ITreeCommService、CrudCommService、TreeCommonService。
+ CRUD 骨架，定义了单表操作(SingleDao)、CrudCommonDao、TreeCommonDao、ICrudCommService、ITreeCommService、CrudCommService、TreeCommonService。
 
-​ CRUD 接口定义如下，业务可继承：
+ CRUD 接口定义如下，业务可继承：
 
 ```java
 public interface ICrudCommonService<T> {
@@ -220,7 +220,7 @@ public class CrudCommonService<D extends CrudCommonDao<T>, T extends DataCommonE
 
 ![image-20200408135142599](./sc.assets/image-20200408135142599.png)
 
-​ 对于树形业务的框架，通过 TreeCommonDao、ITreeCommService、TreeCommonService 来实现业务的框架。
+ 对于树形业务的框架，通过 TreeCommonDao、ITreeCommService、TreeCommonService 来实现业务的框架。
 
 ```java
 public interface ITreeCommonService<T> extends ICrudCommonService<T>{
@@ -353,7 +353,7 @@ public class TreeCommonService<D extends TreeCommonDao<T>, T extends TreeCommonE
 
 ```
 
-​ 某些简单业务无需通过书写 XML 完成 CRUD，可基于 SingleDao 来完成 CRUD，业务可直接注入@Autowired
+ 某些简单业务无需通过书写 XML 完成 CRUD，可基于 SingleDao 来完成 CRUD，业务可直接注入@Autowired
 
 ```java
 public interface SingleDao {
@@ -372,13 +372,13 @@ public interface SingleDao {
 
 #### 2.2.3 togest-cms-crud
 
-​ togest-cms-crud 实现了基于元数据的单表的 MAP 的 CRUD。包括 CommonCrudService、CommonCrudServiceImpl、CommonImportService、CommonImportServiceImpl
+ togest-cms-crud 实现了基于元数据的单表的 MAP 的 CRUD。包括 CommonCrudService、CommonCrudServiceImpl、CommonImportService、CommonImportServiceImpl
 
-​ CommonCrudService 定义接口如下，CommonCrudServiceImpl 为实现类，实现类依赖 SingleDao.业务可分继承该类,达到通过元数据配置的方式动态实现 CRUD，而无需书写 dao、domain 等。对于查询是通过元数据的查询方式属性列的配置实现 like、in 、or、between、=操作
+ CommonCrudService 定义接口如下，CommonCrudServiceImpl 为实现类，实现类依赖 SingleDao.业务可分继承该类,达到通过元数据配置的方式动态实现 CRUD，而无需书写 dao、domain 等。对于查询是通过元数据的查询方式属性列的配置实现 like、in 、or、between、=操作
 
 ![image-20200408141412704](./sc.assets/image-20200408141412704.png)
 
-​ 业务使用该框架完成变电 24 种设备的 CRUD，24 种设备的属性各不同，从而达到较少开发工作量。工程师可定义元数据，后台简单继承下框架就好。
+ 业务使用该框架完成变电 24 种设备的 CRUD，24 种设备的属性各不同，从而达到较少开发工作量。工程师可定义元数据，后台简单继承下框架就好。
 
 ![image-20200408141919249](./sc.assets/image-20200408141919249.png)
 
@@ -386,7 +386,7 @@ public interface SingleDao {
 
 #### 2.2.4 togest-cms-crud-web
 
-​ togest-cms-crud-web 主要功能如下：
+ togest-cms-crud-web 主要功能如下：
 
 1. 针对 2.2.3 封装了 WEB 层，抽象了 CommonResource，业务可继承。WEB 层收到请求之后，会将请求根据元数据编码获取业务逻辑服务，获取不到则用通用的 CommonCrudServiceImpl
 
@@ -615,7 +615,7 @@ public abstract class AbstractController<T extends DataCommonEntity, S extends I
 
 ### 2.3 聚合
 
-​ 对于数据之间的聚合我们使用元数据的方式来实现，聚合典型场景为通过名字找 ID、通过 ID 找名字。目前系统支持的方式如下：
+ 对于数据之间的聚合我们使用元数据的方式来实现，聚合典型场景为通过名字找 ID、通过 ID 找名字。目前系统支持的方式如下：
 
 1. 表达式 HTTP 方式聚合：通过微服务调用方式实现服务聚合
 2. 表达式 SQL 方式聚合：通过 SQL 直接查询方式
@@ -769,13 +769,13 @@ public abstract class AbstractController<T extends DataCommonEntity, S extends I
 
 #### 2.3.2 聚合工具接口
 
-​ 聚合工具 togest-cms-core 模块下，聚合工具接口类具体的定义如下，PolymerizeDataServiceImpl 实现该接口类。需要时可直接用@Autowired 注入
+ 聚合工具 togest-cms-core 模块下，聚合工具接口类具体的定义如下，PolymerizeDataServiceImpl 实现该接口类。需要时可直接用@Autowired 注入
 
 ![image-20200408091658524](./sc.assets/image-20200408091658524.png)
 
 #### 2.3.3 字典配置
 
-​ 通过字典配置实现字典聚合的方式目前系统有两种，分别为元数据定义、注解定义。注解使用在字典的属性上面。目前大部分页面可以通过元数据配置的方式实现，对于某部分业务可通过注解方式实现。
+ 通过字典配置实现字典聚合的方式目前系统有两种，分别为元数据定义、注解定义。注解使用在字典的属性上面。目前大部分页面可以通过元数据配置的方式实现，对于某部分业务可通过注解方式实现。
 
 **元数据定义**
 
@@ -789,13 +789,13 @@ public abstract class AbstractController<T extends DataCommonEntity, S extends I
 | 4    | 属性描述 | 使用的字典名称。 |
 | 5    | 主键属性 | 字典值           |
 
-​ 注意字典值存储方式有两种方式，一种是字典项 ID、另外一种是字典项编码值。两种方式通过字典名称区分，使用字典编码值的统一使用"busy\_"开头。
+ 注意字典值存储方式有两种方式，一种是字典项 ID、另外一种是字典项编码值。两种方式通过字典名称区分，使用字典编码值的统一使用"busy\_"开头。
 
 **字典属性注解定义，用于实体中字典属性列上**
 
 ![image-20200407172118815](./sc.assets/image-20200407172118815.png)
 
-​
+
 
 | 属性       | 描述                          |
 | ---------- | ----------------------------- |
@@ -803,7 +803,7 @@ public abstract class AbstractController<T extends DataCommonEntity, S extends I
 | dictName   | 字典名称，对应元数据属性描述  |
 | primaryKey | 默认“id”                      |
 
-​ 注意字典值存储方式有两种方式，一种是字典项 ID、另外一种是字典项编码值。注解 primaryKey 取值为 id/code。默认使用 id
+ 注意字典值存储方式有两种方式，一种是字典项 ID、另外一种是字典项编码值。注解 primaryKey 取值为 id/code。默认使用 id
 
 **字典聚合注解定义，用于 Service 中，利用 DictMark 及切面实现字典名称的自动聚合**
 
@@ -815,7 +815,7 @@ public @interface DictAggregation {}
 
 #### 2.4.2 字典工具
 
-​ 字典工具 togest-cms-dict-client 模块下，聚合工具接口类具体的定义如下，DictionaryCliet 类。需要时可直接用@Autowired 注入
+ 字典工具 togest-cms-dict-client 模块下，聚合工具接口类具体的定义如下，DictionaryCliet 类。需要时可直接用@Autowired 注入
 
 1、功能描述：聚合名称。通过类字典属性注解@DictMark 实现
 
@@ -902,13 +902,13 @@ public List<DictAnntation> getAnnotationInfo(Class<?> c)
 
 ### 2.4 导入导出
 
-​ 平台导入导出实现方案有以下三种：
+ 平台导入导出实现方案有以下三种：
 
-​ 1)基于元数据，上传模板，动态解析 excel，计算出列与属性关系
+ 1)基于元数据，上传模板，动态解析 excel，计算出列与属性关系
 
-​ 2)自定义模板。通过占位符的方式配置导入导出模板
+ 2)自定义模板。通过占位符的方式配置导入导出模板
 
-​ 3)word 模板。通过 ftl 方式上传模板
+ 3)word 模板。通过 ftl 方式上传模板
 
 #### 2.4 .1 数据模型
 
@@ -957,9 +957,9 @@ public List<DictAnntation> getAnnotationInfo(Class<?> c)
 
 #### 2.4 .2 导入
 
-​ 平台业务导入通过针对某一元数据上传 EXCEL 模板，建立一个模板与元数据的关联关系，前端通过选择模板及上传的导入附件一起带入到后台，输入到导入业务逻辑中。
+ 平台业务导入通过针对某一元数据上传 EXCEL 模板，建立一个模板与元数据的关联关系，前端通过选择模板及上传的导入附件一起带入到后台，输入到导入业务逻辑中。
 
-​ 针对平台的导入应用我们设计并开发了通用的 ConfigExcelImportService、ConfigExcelImportServiceImpl，供业务继承。ConfigExcelImportServiceImpl 导入的思想如下：
+ 针对平台的导入应用我们设计并开发了通用的 ConfigExcelImportService、ConfigExcelImportServiceImpl，供业务继承。ConfigExcelImportServiceImpl 导入的思想如下：
 
 1. 利用 ImportClient 实现文件到 MAP 集合的解析。如果解析出错，则给出提示
 2. 解析 EXCEL 中是否有图片列
@@ -974,7 +974,7 @@ public List<DictAnntation> getAnnotationInfo(Class<?> c)
 11. 调用子类保存方法，业务可重载
 12. 生成错误提示，业务可重载
 
-​ togest-cms-core 模块中定义了导入 ConfigExcelImportService、ConfigExcelImportServiceImpl 类，详细的定义如下：
+ togest-cms-core 模块中定义了导入 ConfigExcelImportService、ConfigExcelImportServiceImpl 类，详细的定义如下：
 
 ```Java
 public interface ConfigExcelImportService<T> {
@@ -1071,7 +1071,7 @@ public interface ConfigExcelImportService<T> {
 
 ```
 
-​ togest-cms-code-client 模块中定义了 ImportClient 类，完成模板的解析及 MAP 集合的封装。togest-code-client 依赖 togest-cms-code-util 模块
+ togest-cms-code-client 模块中定义了 ImportClient 类，完成模板的解析及 MAP 集合的封装。togest-code-client 依赖 togest-cms-code-util 模块
 
 ```Java
 
@@ -1201,7 +1201,7 @@ public class ImportClient {
 
 ```
 
-​ 给水专业日计划导入，继承了通用导入接口及实现类，并重写了 save 方法
+ 给水专业日计划导入，继承了通用导入接口及实现类，并重写了 save 方法
 
 ![image-20200408165501302](./sc.assets/image-20200408165501302.png)
 
@@ -1209,7 +1209,7 @@ public class ImportClient {
 
 #### 2.4 .3 导出
 
-​ EXCEL 导出支持元数据模板、占位符自定义模板两种导出方式，Word 导出通过 ftl 模板引擎导出。在 togest-cms-code-client 中定义了 ExportClient 类，实现 Excel 的导出。
+ EXCEL 导出支持元数据模板、占位符自定义模板两种导出方式，Word 导出通过 ftl 模板引擎导出。在 togest-cms-code-client 中定义了 ExportClient 类，实现 Excel 的导出。
 
 | 序号 | 方法                                           | 描述                                                                 |
 | ---- | ---------------------------------------------- | -------------------------------------------------------------------- |
@@ -1387,7 +1387,7 @@ public <T> byte[] exportByMapPlugIn(List<Map<String, Object>> entityList, List<E
 
 **输入：**entityList 集合（实体）
 
-​ headerList 集合（表头实体）
+ headerList 集合（表头实体）
 
 | 属性       | 类型                    | 描述             | 是否必填 |
 | ---------- | ----------------------- | ---------------- | -------- |
@@ -1880,7 +1880,7 @@ public byte[] wordExport(Map<String, Object> map);
 
 ### 2.5 缓存
 
-​ 平台缓存使用的是 Redis 框架，开发了 togest-cache 模块。
+ 平台缓存使用的是 Redis 框架，开发了 togest-cache 模块。
 
 ![image-20200410104253510](./sc.assets/image-20200410104253510.png)
 
@@ -3010,19 +3010,19 @@ Object get(String key);
 
 #### 2.5.3 缓存防并发
 
-​ 我们开发经常会碰到表单点击重复提交场及相同资源并发，导致数据错误的问题。一般我们使用数据库的乐观锁(只能降低并发率)、悲观锁、唯一索引、Java 的单服务器的同步机制，Redis 锁，处理该问题。本文以接触网工作票上面开分工单为例，我们经常碰到前端分工单重复提交，导致后台 get 时找到多条的异常。
+ 我们开发经常会碰到表单点击重复提交场及相同资源并发，导致数据错误的问题。一般我们使用数据库的乐观锁(只能降低并发率)、悲观锁、唯一索引、Java 的单服务器的同步机制，Redis 锁，处理该问题。本文以接触网工作票上面开分工单为例，我们经常碰到前端分工单重复提交，导致后台 get 时找到多条的异常。
 
-​ **1.乐观锁**。我们可以给工作票模型增加一个分工单版本号的属性，后台在处理分工单时，先 select id,版本号 from jcw_work_ticket。在保存时,update jcw_work_ticket 版本号=版本号+1 where id=id and 版本号=当前版本号。在 update 返回结果大于 0 时，再执行插入操作，可降低并发带来的问题，但是规避不了。
+ **1.乐观锁**。我们可以给工作票模型增加一个分工单版本号的属性，后台在处理分工单时，先 select id,版本号 from jcw_work_ticket。在保存时,update jcw_work_ticket 版本号=版本号+1 where id=id and 版本号=当前版本号。在 update 返回结果大于 0 时，再执行插入操作，可降低并发带来的问题，但是规避不了。
 
-​ **2.悲观锁。**我们可以使用悲观锁 中共享锁，锁住工作票，先根据 ID 去锁住该工作票，再执行分工单判重操作，最后根据重复结果执行插入操作。
+ **2.悲观锁。**我们可以使用悲观锁 中共享锁，锁住工作票，先根据 ID 去锁住该工作票，再执行分工单判重操作，最后根据重复结果执行插入操作。
 
-​ **3.唯一索引。**分工单建模时，添加唯一索引，工作票字段添加唯一索引。把这类并发抛给数据库层面处理，然后由 Advice 捕捉，提示异常给前端。
+ **3.唯一索引。**分工单建模时，添加唯一索引，工作票字段添加唯一索引。把这类并发抛给数据库层面处理，然后由 Advice 捕捉，提示异常给前端。
 
-​ **4.同步关键字、对象锁。**使用 JAVA 的同步关键字、对象锁等机制可以解决并发的问题，但是解决不了分布式系统并发的问题。只能解决单服务器问题，建议不要使用。
+ **4.同步关键字、对象锁。**使用 JAVA 的同步关键字、对象锁等机制可以解决并发的问题，但是解决不了分布式系统并发的问题。只能解决单服务器问题，建议不要使用。
 
 ![image-20200410131342960](./sc.assets/image-20200410131342960.png)
 
-​ **5.Redis 分布式锁。**我们可以使用工作票 ID 为 KEY,保存到 Redis 上并锁住一定时间，当对同一分工单提交插入操作时，上次操作未释放，这次操作拿不到锁，即可给前端提示。
+ **5.Redis 分布式锁。**我们可以使用工作票 ID 为 KEY,保存到 Redis 上并锁住一定时间，当对同一分工单提交插入操作时，上次操作未释放，这次操作拿不到锁，即可给前端提示。
 
 **RedisLockService**,方法定义如下，使用时@Autowird 注入即可
 
@@ -3054,7 +3054,7 @@ public boolean unlock(String key, String requestId)
 
 #### 2.5.4 单据号
 
-​ 2.5.3 实现的防并发会出现并发提示，导致提交不成功，对于票据号的产生，目前我们系统的产生有两种方式 1)基于数据库产生，使用共享锁或者排它锁产生 ，在各种专业模块中有应用。2)基于 Redis 的自增产生。对于票据的实现我们设计了 OrderFormNo(票据规则接口类)、IOrderFormNoService(票据接口)、OrderFormNoService。使用时可直接注入@Autowired IOrderFormNoService
+ 2.5.3 实现的防并发会出现并发提示，导致提交不成功，对于票据号的产生，目前我们系统的产生有两种方式 1)基于数据库产生，使用共享锁或者排它锁产生 ，在各种专业模块中有应用。2)基于 Redis 的自增产生。对于票据的实现我们设计了 OrderFormNo(票据规则接口类)、IOrderFormNoService(票据接口)、OrderFormNoService。使用时可直接注入@Autowired IOrderFormNoService
 
 **票据接口**
 
@@ -3087,15 +3087,15 @@ String generateFormNo(String  businessKey,OrderFormNo orderFormNo);
 
 ### 2.6 权限及相关注解
 
-​ 系统权限分为功能权限、数据权限。功能权限主要表现级别为 BUTTON 的操作，例如增加、删除、修改、审核级别的按钮权限，数据权限指的是查看数据的范围，系统包括部门、部门及下属部门、全段、全局四种数据权限。系统的权限设计比较典型，主要的模型包括功能、角色、功能与角色、用户与角色。
+ 系统权限分为功能权限、数据权限。功能权限主要表现级别为 BUTTON 的操作，例如增加、删除、修改、审核级别的按钮权限，数据权限指的是查看数据的范围，系统包括部门、部门及下属部门、全段、全局四种数据权限。系统的权限设计比较典型，主要的模型包括功能、角色、功能与角色、用户与角色。
 
-​ 功能权限在前端控制，登录时，取的用户在所有模块的功能权限，我们会对每一个功能权限进行唯一编码控制，前端利用按钮编码确定用户是否有 BUTTON 级别权限。
+ 功能权限在前端控制，登录时，取的用户在所有模块的功能权限，我们会对每一个功能权限进行唯一编码控制，前端利用按钮编码确定用户是否有 BUTTON 级别权限。
 
-​ 数据权限则由后台控制，前端或者第三方系统请求数据时，经过 API 网关进行登录校验或者白名单校验，校验通过则放行，进入业务微服务，业务服务通过数据权限编码，进行访问切入，处理部门属性字段。
+ 数据权限则由后台控制，前端或者第三方系统请求数据时，经过 API 网关进行登录校验或者白名单校验，校验通过则放行，进入业务微服务，业务服务通过数据权限编码，进行访问切入，处理部门属性字段。
 
 #### 2.6.1 UserDataScope
 
-​ 部门数据权限切面，属性如下，通过该注解，切面会完成业务查询条件的段别、部门属性字段的封装，部门属性业务在书写 dao 层时注意是逗号拼接的多个部门，段别在启用 section 时，也会存在多个。业务部分需要注意下
+ 部门数据权限切面，属性如下，通过该注解，切面会完成业务查询条件的段别、部门属性字段的封装，部门属性业务在书写 dao 层时注意是逗号拼接的多个部门，段别在启用 section 时，也会存在多个。业务部分需要注意下
 
 | 序号 | 属性          | 描述                                                                                  |
 | ---- | ------------- | ------------------------------------------------------------------------------------- |
@@ -3106,7 +3106,7 @@ String generateFormNo(String  businessKey,OrderFormNo orderFormNo);
 
 #### 2.6.2 DataControlSectionPut
 
-​ 该注解使用在无部门字段业务，完成段别属性的注入
+ 该注解使用在无部门字段业务，完成段别属性的注入
 
 | 序号 | 属性     | 描述                                                                 |
 | ---- | -------- | -------------------------------------------------------------------- |
@@ -3114,11 +3114,11 @@ String generateFormNo(String  businessKey,OrderFormNo orderFormNo);
 
 #### 2.6.3 DeleteDataPut
 
-​ 该注解使用在删除方法的控制器上面，完成删除数据时删除人、删除事件、删除 IP 等属性维护
+ 该注解使用在删除方法的控制器上面，完成删除数据时删除人、删除事件、删除 IP 等属性维护
 
 #### 2.6.4 AddDataPut
 
-​ 该注解使用在新增、修改方法的控制器上面，完成创建人、创建时间、创建 IP、修改人、修改时间、修改 IP 属性维护
+ 该注解使用在新增、修改方法的控制器上面，完成创建人、创建时间、创建 IP、修改人、修改时间、修改 IP 属性维护
 
 #### 2.6.5 框架使用
 
@@ -3373,11 +3373,11 @@ CREATE TABLE `sys_status_his_task_actor` (
 | 3    | StatusFlowEngine         | 流程引擎实现类。                                       |
 | 4    | SimpleStatusFlowEngine   | 简单流程引擎实现类。流程引擎只使用当前任务、历史任务表 |
 
-​ 流程引擎核心类依赖的流程处理类图如下：
+ 流程引擎核心类依赖的流程处理类图如下：
 
 ![image-20200402135519432](./sc.assets/image-20200402135519432.png)
 
-​
+
 
 | 序号 | 接口/类名                | 说明                 |
 | ---- | ------------------------ | -------------------- |
@@ -3415,9 +3415,9 @@ CREATE TABLE `sys_status_his_task_actor` (
 
 #### 2.7.2 API 介绍
 
-​ 流程引擎目前支持单个发起、批量发起、单个驳回、批量驳回、单个办理、批量办理、单个召回、批量挂起功能。任务支持 Any 或者 All，All 为会签。流程引擎项目分为 togest-cms-statusflow-engine、togest-cms-statusflow-engine-web 两个模块。如果是 WEB 项目直接引用 togest-cms-statusflow-engine-web
+ 流程引擎目前支持单个发起、批量发起、单个驳回、批量驳回、单个办理、批量办理、单个召回、批量挂起功能。任务支持 Any 或者 All，All 为会签。流程引擎项目分为 togest-cms-statusflow-engine、togest-cms-statusflow-engine-web 两个模块。如果是 WEB 项目直接引用 togest-cms-statusflow-engine-web
 
-​
+
 
 ```xml
 		<dependency>
@@ -3439,7 +3439,7 @@ CREATE TABLE `sys_status_his_task_actor` (
 
 ##### 2.7.2.1 流程引擎核心
 
-​ AbstractStatusFlowEngine 核心流程包括的方法如下：
+ AbstractStatusFlowEngine 核心流程包括的方法如下：
 
 | 方法名称                 | 输入                 | 输出                    | 功能描述                                                                                     |
 | ------------------------ | -------------------- | ----------------------- | -------------------------------------------------------------------------------------------- |
@@ -4060,7 +4060,7 @@ StatusFlowEngineResource API 如下：
 
 ##### 2.7.2.3 流程事件
 
-​ 流程实例启动、结束、任务办理完成后会触发系统的全局事件，完成业务表的流程字段的更新。如果某个业务流程配置了业务相关的事件监听器，则会通知业务，如果没有定义，则统一由全局监听器自己处理。GlobalStatusFlowListener 的相关 API 接口如下：
+ 流程实例启动、结束、任务办理完成后会触发系统的全局事件，完成业务表的流程字段的更新。如果某个业务流程配置了业务相关的事件监听器，则会通知业务，如果没有定义，则统一由全局监听器自己处理。GlobalStatusFlowListener 的相关 API 接口如下：
 
 ```JAVA
    /**
@@ -4102,7 +4102,7 @@ StatusFlowEngineResource API 如下：
 
 ##### 2.7.2.4 流程与业务
 
-​ BusinessService 类实现业务表的处理及任务创建的消息推送，包括流程字段更新、业务状态的更新、谁办理及办理时间的两个段更新。业务表必须包括以下字段：
+ BusinessService 类实现业务表的处理及任务创建的消息推送，包括流程字段更新、业务状态的更新、谁办理及办理时间的两个段更新。业务表必须包括以下字段：
 
 ```sql
   `task_user` varchar(300) DEFAULT NULL COMMENT '下步办理人',
@@ -4167,7 +4167,7 @@ StatusFlowEngineResource API 如下：
 
 ##### 2.7.2.5 流程事件自定义
 
-​ 业务部分可根据自身需要扩展流程引擎，比如流程表可以按照段别、模块存储、流程监听器需业务自身扩展。如果扩展了流程监听器，全局监听事件则会调用业务自定义的监听器，则不执行自动更新业务表
+ 业务部分可根据自身需要扩展流程引擎，比如流程表可以按照段别、模块存储、流程监听器需业务自身扩展。如果扩展了流程监听器，全局监听事件则会调用业务自定义的监听器，则不执行自动更新业务表
 
 | 序号 | 属性                                                        | 描述                                                                                        |
 | ---- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -4183,7 +4183,7 @@ StatusFlowEngineResource API 如下：
 | 10   | com.togest.engine.process.nodes.node.trigger                | 节点触发器定义                                                                              |
 | 11   | com.togest.engine.process.nodes.node.trigger.completedField | 任务完成时，需更新的“谁办理”、“什么时间”两个字段，两个字段采用“，”拼接的方式                |
 
-​ 以 6C 数据中心为例，介绍流程配置文件
+ 以 6C 数据中心为例，介绍流程配置文件
 
 ```properties
 com:
@@ -4308,7 +4308,7 @@ public class LedgerStatusFlowListener implements StatusFlowListener {
 
 ```
 
-​ 以综合办公用品申请为例，介绍流程配置文件。自定义扩展了流程事件
+ 以综合办公用品申请为例，介绍流程配置文件。自定义扩展了流程事件
 
 ```properties
 com:
@@ -4326,15 +4326,15 @@ com:
                   completedField: audit_person,audit_date
 ```
 
-​
 
-​
+
+
 
 ##### 2.7.2.6 业务办理提交扩展
 
-​ 有些业务可能会存在业务数据及流程一块操作的过程，遇到这种情况时，我们目前有两种处理办法，第一种采用业务数据保存与流程办理分成两步，增加一个流程操作按钮，以达到保存业务数据和流程分开。对于确实需要一步操作的话，我们的另外一种处理方式是采用自定义业务提交 API 的方式实现，比如某一个流程节点可以自定义 API 提交及驳回路由，而不走公共提交 API，由业务触发调用工作流引擎。
+ 有些业务可能会存在业务数据及流程一块操作的过程，遇到这种情况时，我们目前有两种处理办法，第一种采用业务数据保存与流程办理分成两步，增加一个流程操作按钮，以达到保存业务数据和流程分开。对于确实需要一步操作的话，我们的另外一种处理方式是采用自定义业务提交 API 的方式实现，比如某一个流程节点可以自定义 API 提交及驳回路由，而不走公共提交 API，由业务触发调用工作流引擎。
 
-​ 以下是电力针对供电处科长审核时，业务办理重写提交场景。
+ 以下是电力针对供电处科长审核时，业务办理重写提交场景。
 
 ![image-20200402171141910](./sc.assets/image-20200402171141910.png)
 
@@ -4359,7 +4359,7 @@ com:
 	}
 ```
 
-​ 业务有时候会需要判断该办理是否是驳回操作，BatchCompleteModel 类中提供方法判断变量值
+ 业务有时候会需要判断该办理是否是驳回操作，BatchCompleteModel 类中提供方法判断变量值
 
 ```java
  public boolean compareVariable(String variableName, Object variableValue) {
@@ -4390,6 +4390,14 @@ com:
     }
 
 ```
+
+
+
+##### 2.7.2.7 业务事件升级
+
+​         针对某些业务应用可能只关注流程结束或者某一个具体的事件感兴趣，而其它的事件继续希望流程引擎去处理，因此扩展了一个抽象CommonStatusFlowListener，其它的应用可以继承它，再去重写某一个事件。
+
+![image-20200430134644358](./sc.assets/image-20200430134644358.png)
 
 #### 2.7.3 流程定义配置
 
@@ -4442,9 +4450,9 @@ com:
 | 5    | 岗位     | 岗位，支持多选                                                                            |
 | 6    | 人员     | 人员，支持多选                                                                            |
 
-​
 
-​ 车间审核节点：取业务字段 deptId 的部门及上级部门人员分类为车间管理所有人的
+
+ 车间审核节点：取业务字段 deptId 的部门及上级部门人员分类为车间管理所有人的
 
 ![image-20200403105257132](./sc.assets/image-20200403105257132.png)
 
@@ -4905,41 +4913,41 @@ public int persistAndHandleMessage(Event event)```
 
 平台审计框架，用于数据提交分析。分析的涵盖属性包括：
 
-​ 1)IP
+ 1)IP
 
-​ 2)用户
+ 2)用户
 
-​ 3) 请求时间
+ 3) 请求时间
 
-​ 4）响应时间
+ 4）响应时间
 
-​ 5）后台响应时间
+ 5）后台响应时间
 
-​ 6）请求方法：PUT/GET/POST/DELETE
+ 6）请求方法：PUT/GET/POST/DELETE
 
-​ 7) 模块 URL
+ 7) 模块 URL
 
-​ 8) 二级模块 URL
+ 8) 二级模块 URL
 
-​ 9) 数据 API
+ 9) 数据 API
 
-​ 10) 提交请求内容
+ 10) 提交请求内容
 
-​ 11）响应内容
+ 11）响应内容
 
-​ 13）后台执行 SQL 记录
+ 13）后台执行 SQL 记录
 
-​ 14）上传附件
+ 14）上传附件
 
-​ 15）上传附件名称
+ 15）上传附件名称
 
-​ 16）异常
+ 16）异常
 
-​ 17）功能名称
+ 17）功能名称
 
-​ 18）agent
+ 18）agent
 
-​ 框架采用切面、 SQL 拦截器、线程池异步保存痕迹信息，附件存储在 MYSQL 中设计思想开发。审计框架包括 client、server 两个模块。
+ 框架采用切面、 SQL 拦截器、线程池异步保存痕迹信息，附件存储在 MYSQL 中设计思想开发。审计框架包括 client、server 两个模块。
 
 #### 2.9.1 数据表
 
@@ -4984,7 +4992,7 @@ public @interface MarkAnnotation {
 }
 ```
 
-​ functionUrl:二级模块，比如/C1/defect。默认可以空。空则用 API 的前两级填充。比如/C1/defect/imports 则 functionUrl=/C1/defect
+ functionUrl:二级模块，比如/C1/defect。默认可以空。空则用 API 的前两级填充。比如/C1/defect/imports 则 functionUrl=/C1/defect
 
 #### 2.9.3 配置
 
@@ -5159,22 +5167,22 @@ com:
 
 **业务**
 
-​ 业务中需要结合 Swagger 的 ApiOperation 注解实现 API 的描述。MarkAnnotation 的解释看上章节
+ 业务中需要结合 Swagger 的 ApiOperation 注解实现 API 的描述。MarkAnnotation 的解释看上章节
 
 ![image-20200407131741091](./sc.assets/image-20200407131741091.png)
 
 ### 2.10 代码生成器
 
-​ 为了提高后端工程师的开发效率，我们开发了 togest-cms-generator 模块，它目前是作为一个独立的微服务运行。利用这个服务，我们可以完成控制器、业务逻辑、dao、xml 的代码生成。生成完之后，针对业务做些修改定制开发即何。
+ 为了提高后端工程师的开发效率，我们开发了 togest-cms-generator 模块，它目前是作为一个独立的微服务运行。利用这个服务，我们可以完成控制器、业务逻辑、dao、xml 的代码生成。生成完之后，针对业务做些修改定制开发即何。
 
-​ **功能描述：**生成代码，返回 ZIP 压缩包
+ **功能描述：**生成代码，返回 ZIP 压缩包
 
 ```Java
   @RequestMapping(value="/generator",method=RequestMethod.GET)@ApiOperation(value = "生成代码")
 public void code(HttpServletRequest request, HttpServletResponse response,GeneratorRequest entity)
 ```
 
-​ **输入：**GeneratorRequest
+ **输入：**GeneratorRequest
 
 | 属性        | 类型   | 描述                                |
 | ----------- | ------ | ----------------------------------- |
@@ -5183,27 +5191,27 @@ public void code(HttpServletRequest request, HttpServletResponse response,Genera
 | packageName | String | 包名                                |
 | tag         | String | 树形应用/典型。1：树形 其它值：典型 |
 
-​ **输出：**ZIP 文件，可直接拷贝到项目中
+ **输出：**ZIP 文件，可直接拷贝到项目中
 
 ### 2.11 常用工具
 
-​ 常用工具 togest-common 模块 util 包图如下，分别包括 JSON、文件、String、Word、XLS、日期、反射、集合、条形码、二维码常用的一些操作类。
+ 常用工具 togest-common 模块 util 包图如下，分别包括 JSON、文件、String、Word、XLS、日期、反射、集合、条形码、二维码常用的一些操作类。
 
-​ util 定义了反射、日期、条形码、二维码、集合工具。其中 ListUtils、MapUtils、SetUtils 这些类可以使用
+ util 定义了反射、日期、条形码、二维码、集合工具。其中 ListUtils、MapUtils、SetUtils 这些类可以使用
 
-​ **com.google.common.collect**包中集合替代使用。
+ **com.google.common.collect**包中集合替代使用。
 
-​ json 包定义了 JSON、实体间的转换。
+ json 包定义了 JSON、实体间的转换。
 
-​ file 包中定义文件拷贝、图片、ZIP、流、FTL 处理工具。
+ file 包中定义文件拷贝、图片、ZIP、流、FTL 处理工具。
 
-​ function 包定义了链式空处理、空值校验、集合的处理工具。
+ function 包定义了链式空处理、空值校验、集合的处理工具。
 
-​ string 包定义了字符串的常用的一些处理方法。
+ string 包定义了字符串的常用的一些处理方法。
 
-​ xls 包定义了导入、导出的方法。
+ xls 包定义了导入、导出的方法。
 
-​ word 包定义了基于书签方式的详情替换、表格方式创建、详情替换+表格方式创
+ word 包定义了基于书签方式的详情替换、表格方式创建、详情替换+表格方式创
 
 ![image-20200413174753577](./sc.assets/image-20200413174753577.png)
 
@@ -5442,15 +5450,15 @@ Optional.ofNullable(str)
 
 ### 2.12 日志使用
 
-​ 日志使用时，输出信息要使用占位符的方式，实例如下。
+ 日志使用时，输出信息要使用占位符的方式，实例如下。
 
 ![image-20200414135615542](./sc.assets/image-20200414135615542.png)
 
-​ 日志使用时，输出异常堆栈信息，实例如下，便于追踪异常。
+ 日志使用时，输出异常堆栈信息，实例如下，便于追踪异常。
 
 ![image-20200414140908708](./sc.assets/image-20200414140908708.png)
 
-​ 谨慎地记录日志。生产环境禁止输出 debug 日志；有选择地输出 info 日志；如果使用 warn 来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘撑爆，并记得及时删除这些观察日志。
+ 谨慎地记录日志。生产环境禁止输出 debug 日志；有选择地输出 info 日志；如果使用 warn 来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘撑爆，并记得及时删除这些观察日志。
 
 说明：大量地输出无效日志，不利于系统性能提升，也不利于快速定位错误点。
 
@@ -5458,7 +5466,7 @@ Optional.ofNullable(str)
 
 ### 3.1 注册服务
 
-​ 平台注册 togest-register 模块，为服务注册中心，独立服务运行,默认端口 8762，目前单点运行。
+ 平台注册 togest-register 模块，为服务注册中心，独立服务运行,默认端口 8762，目前单点运行。
 
 ![image-20200410145632207](./sc.assets/image-20200410145632207.png)
 
@@ -5466,13 +5474,13 @@ Optional.ofNullable(str)
 
 ![image-20200414133846210](./sc.assets/image-20200414133846210.png)
 
-​ 平台 togest-gateway 模块，为所有后台网关转发服务，独立服务运行，目前单点运行,默认端口 50001。网关的功能如下：
+ 平台 togest-gateway 模块，为所有后台网关转发服务，独立服务运行，目前单点运行,默认端口 50001。网关的功能如下：
 
-​ 1、登录鉴权。所有经过网关的请求都会获取 TOKEN 拦截。TOKEN 校验通过 REDIS 完成
+ 1、登录鉴权。所有经过网关的请求都会获取 TOKEN 拦截。TOKEN 校验通过 REDIS 完成
 
-​ 2、白名单鉴权。对于第三方系统需要访问我们的系统，我们会通过配置文件，配置些固定的 KEY 及秘钥。用户携带这些固定秘钥进行白名单鉴权
+ 2、白名单鉴权。对于第三方系统需要访问我们的系统，我们会通过配置文件，配置些固定的 KEY 及秘钥。用户携带这些固定秘钥进行白名单鉴权
 
-​ 3、路由功能。通过路由配置规则，进行转发。配置定义参考以下文件：
+ 3、路由功能。通过路由配置规则，进行转发。配置定义参考以下文件：
 
 ```properties
 routes:
@@ -5516,31 +5524,31 @@ routes:
 
 ### 3.3 监控服务
 
-​ 平台 togest-admin 模块，为服务监控模块，完成平台所有微服务的监控，默认端口 8090。通过该监控可以看到服务的在线状态、CPU、内存、健康检查情况、日志查看。
+ 平台 togest-admin 模块，为服务监控模块，完成平台所有微服务的监控，默认端口 8090。通过该监控可以看到服务的在线状态、CPU、内存、健康检查情况、日志查看。
 
 ![image-20200410144504923](./sc.assets/image-20200410144504923.png)
 
 ### 3.4 配置管理
 
-​ 配置管理服务管理平台所有服务的配置文件，配置文件的管理目前有三种方式 ,包括配置管理本地存储、GIT、SVN 管理。服务的配置文件一旦有变动，配置管理服务会通知关联的服务进行重启。目前平台一些 IP 的配置，采用的都是 HOST，配置不经常变化，估暂时未启用该服务。
+ 配置管理服务管理平台所有服务的配置文件，配置文件的管理目前有三种方式 ,包括配置管理本地存储、GIT、SVN 管理。服务的配置文件一旦有变动，配置管理服务会通知关联的服务进行重启。目前平台一些 IP 的配置，采用的都是 HOST，配置不经常变化，估暂时未启用该服务。
 
-​ 以下为配置管理服务使用本地文件管理服务配置，文件名要对应微服务名称。
+ 以下为配置管理服务使用本地文件管理服务配置，文件名要对应微服务名称。
 
 ![image-20200410151331625](./sc.assets/image-20200410151331625.png)
 
 ### 3.5 字典
 
-​ 字典服务管理平台所有的字典，微服务之间通过 feignClient 聚合。
+ 字典服务管理平台所有的字典，微服务之间通过 feignClient 聚合。
 
 ![image-20200414114952249](./sc.assets/image-20200414114952249.png)
 
-​ 字典开发了客户端模块，在上面聚合中已经详细介绍了，不再做描述，字典服务经常被服务调用的 restful api 如下：
+ 字典开发了客户端模块，在上面聚合中已经详细介绍了，不再做描述，字典服务经常被服务调用的 restful api 如下：
 
 1. **[GET](http://192.168.1.96:40001/swagger-ui.html#!/dictionary-item-resource/getNameByIdsUsingGET) [/dictionaryItem/ids/names](http://192.168.1.96:40001/swagger-ui.html#!/dictionary-item-resource/getNameByIdsUsingGET)**
 
    **输入：** id,多个
 
-​ **输出：**
+ **输出：**
 
 ```json
 {
@@ -5596,11 +5604,11 @@ routes:
 
 ### 3.6 元数据
 
-​ 元数据服务管理了平台所有的 Crud、导入、导出元数据模型。
+ 元数据服务管理了平台所有的 Crud、导入、导出元数据模型。
 
 ![image-20200414115421054](./sc.assets/image-20200414115421054.png)
 
-​ 所有业务都是基于元数据驱动，我们针对聚合的应用，设计了 togest-cms-code-client 模块，在导入导出中有些介绍。togest-cms-code-client 中设计了 MetadataConfigClient、ImportConfigClient、MetadataClient 三个类实现元数据服务的调用。
+ 所有业务都是基于元数据驱动，我们针对聚合的应用，设计了 togest-cms-code-client 模块，在导入导出中有些介绍。togest-cms-code-client 中设计了 MetadataConfigClient、ImportConfigClient、MetadataClient 三个类实现元数据服务的调用。
 
 **MetadataConfigClient：获取元数据配置相关接口**
 
@@ -5705,15 +5713,15 @@ public interface ImportConfigClient {
 
 ### 3.7 文件
 
-​ 文件服务管理平台所有的文件，文件系统支持 ftp、disk、fastdfs 三种方式。所有的功能包括：大小文件上传、下载功能。
+ 文件服务管理平台所有的文件，文件系统支持 ftp、disk、fastdfs 三种方式。所有的功能包括：大小文件上传、下载功能。
 
 ![image-20200414132806868](./sc.assets/image-20200414132806868.png)
 
-​ 文件服务相关的 API，可查看http://192.168.1.96:20001/swagger-ui.html#/。
+ 文件服务相关的 API，可查看http://192.168.1.96:20001/swagger-ui.html#/。
 
-​ 业务服务可能会需要调用文件服务，例如 Excel 中解析的图片需要上传至文件服务器上面。针对这么一种场景，我们设计了`togest-file-client`模块，便于内部服务上传文件。`togest-file-client`中是通过`feignClient`调用的，效率会较低，如果存在大量的文件上传的话，建议使用`togest-file-system-service`模块，直接操作文件系统。直接使用文件系统的话，需要考虑的是如果使用 disk 的方式，就需要考虑挂载的方式。
+ 业务服务可能会需要调用文件服务，例如 Excel 中解析的图片需要上传至文件服务器上面。针对这么一种场景，我们设计了`togest-file-client`模块，便于内部服务上传文件。`togest-file-client`中是通过`feignClient`调用的，效率会较低，如果存在大量的文件上传的话，建议使用`togest-file-system-service`模块，直接操作文件系统。直接使用文件系统的话，需要考虑的是如果使用 disk 的方式，就需要考虑挂载的方式。
 
-​ **`FileClient`**
+ **`FileClient`**
 
 ```java
 @FeignClient(FeignServerConfig.fileServerName)
@@ -5760,13 +5768,13 @@ public interface FileClient {
 
 ### 3.8 CMS
 
-​ CMS 平台门户基础，实现功能包括登录、人员、组织结构、权限、站点设置等功能。 API，可查看http://192.168.1.96:40002/swagger-ui.html#/。
+ CMS 平台门户基础，实现功能包括登录、人员、组织结构、权限、站点设置等功能。 API，可查看http://192.168.1.96:40002/swagger-ui.html#/。
 
 ![image-20200414134024940](./sc.assets/image-20200414134024940.png)
 
 ### 3.9 业务基础
 
-​ 业务基础，平台业务基础服务，涵盖的功能包括铁路线路、站区、桥隧、接触网管辖范围、供电臂、所亭。 API，可查看http://192.168.1.96:30002/swagger-ui.html#/。
+ 业务基础，平台业务基础服务，涵盖的功能包括铁路线路、站区、桥隧、接触网管辖范围、供电臂、所亭。 API，可查看http://192.168.1.96:30002/swagger-ui.html#/。
 
 ![image-20200414134100597](./sc.assets/image-20200414134100597.png)
 
@@ -5774,9 +5782,9 @@ public interface FileClient {
 
 ![image-20200414134214998](./sc.assets/image-20200414134214998.png)
 
-​ 消息推送模块采用了 MQ 和 WebSocket 技术，实现消息的及时推送。整体设计思想： 生产者通过 MQ 点对点的方式将业务产生的消息发送给消息推送服务，消息推送服务通过绑定队列消费生产者的消息，消息服务一旦监听到消息之后，保存到数据库中，然后判断该消息是否满足在线用户的推送条件，如果满足，则及时推送。如果用户不在线，则用户登录时，会调用消息推送模块的 API 把最近的消息推送出去。
+ 消息推送模块采用了 MQ 和 WebSocket 技术，实现消息的及时推送。整体设计思想： 生产者通过 MQ 点对点的方式将业务产生的消息发送给消息推送服务，消息推送服务通过绑定队列消费生产者的消息，消息服务一旦监听到消息之后，保存到数据库中，然后判断该消息是否满足在线用户的推送条件，如果满足，则及时推送。如果用户不在线，则用户登录时，会调用消息推送模块的 API 把最近的消息推送出去。
 
-​ 消息推送模块包括 togest-cms-msg-model、togest-cms-msg-push 模块，togest-cms-msg-push 及业务服务可依赖 togest-cms-msg-model 模块。togest-cms-msg-model 定义了消息结构，传输的消息 ActMsgEnvelope 结构如下
+ 消息推送模块包括 togest-cms-msg-model、togest-cms-msg-push 模块，togest-cms-msg-push 及业务服务可依赖 togest-cms-msg-model 模块。togest-cms-msg-model 定义了消息结构，传输的消息 ActMsgEnvelope 结构如下
 
 **ActMsgEnvelope**
 
@@ -5861,7 +5869,7 @@ public static final String SYSTEM_MQ_BATCH_QUEUE="com.tg.sys.msg.batch.queue";
 public RestfulResponse<Page<ActMessageDTO>> allActMessageList(ActMessageRequest vo)
 ```
 
-​ **输入：**
+ **输入：**
 
 | 属性      | 类型     | 描述                   |
 | --------- | -------- | ---------------------- |
@@ -5876,13 +5884,13 @@ public RestfulResponse<Page<ActMessageDTO>> allActMessageList(ActMessageRequest 
 
 ![image-20200414134307239](./sc.assets/image-20200414134307239.png)
 
-​ 平台开发了 togest-schedule 模块来实现平台所有定时任务的需要，由定时任务服务统一执行定时。定时任务服务包括的功能：
+ 平台开发了 togest-schedule 模块来实现平台所有定时任务的需要，由定时任务服务统一执行定时。定时任务服务包括的功能：
 
-​ 1)配置所有的定时任务
+ 1)配置所有的定时任务
 
-​ 2)可启动、停止、手动执行
+ 2)可启动、停止、手动执行
 
-​ 2)可查看历史运行的日志
+ 2)可查看历史运行的日志
 
 **配置界面：**
 
@@ -6283,7 +6291,7 @@ diamond 即菱形泛型，直接使用<>来指代前边已经指定的类型，�
 
 即使用 error(String msg, Throwable t); 在日志中记录完整的异常堆栈信息，而不是只记录 e.getMessage()。
 
-​
+
 
 ### 4.7 异常处理
 
