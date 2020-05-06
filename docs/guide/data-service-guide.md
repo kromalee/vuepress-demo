@@ -32,22 +32,16 @@ sidebarDepth: 3
 > https://www.runoob.com/java/java-basic-datatypes.html
 
 <iframe src="https://www.runoob.com/java/java-basic-datatypes.html" width="100%" height="800px"></iframe>
-
-
 ### 1.2、Maven 教程
 
 > https://www.runoob.com/maven/maven-tutorial.html
 
 <iframe src="https://www.runoob.com/maven/maven-tutorial.html" width="100%" height="800px"></iframe>
-
-
 ### 1.3、MySQL 教程
 
 > https://www.runoob.com/mysql/mysql-tutorial.html
 
 <iframe src="https://www.runoob.com/mysql/mysql-tutorial.html" width="100%" height="800px"></iframe>
-
-
 ### 1.4、spring boot简介
 
 1、SpringBoot简介
@@ -158,9 +152,14 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
    ![1588142046553](./data-service-guide.assets/1588142046553.png)
 
+6. swagger（测试接口）--（ip+端口+swagger-ui.html；如：http://192.168.1.98:40006/swagger-ui.html）
 
+   ![1588752290206](./data-service-guide.assets/1588752290206.png)
 
    
 
+   
+
+### 
 
 ### 
