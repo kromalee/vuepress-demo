@@ -32,16 +32,22 @@ sidebarDepth: 3
 > https://www.runoob.com/java/java-basic-datatypes.html
 
 <iframe src="https://www.runoob.com/java/java-basic-datatypes.html" width="100%" height="800px"></iframe>
+
+
 ### 1.2、Maven 教程
 
 > https://www.runoob.com/maven/maven-tutorial.html
 
 <iframe src="https://www.runoob.com/maven/maven-tutorial.html" width="100%" height="800px"></iframe>
+
+
 ### 1.3、MySQL 教程
 
 > https://www.runoob.com/mysql/mysql-tutorial.html
 
 <iframe src="https://www.runoob.com/mysql/mysql-tutorial.html" width="100%" height="800px"></iframe>
+
+
 ### 1.4、spring boot简介
 
 1、SpringBoot简介
@@ -98,7 +104,7 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
     服务网关 —— Netflix Zuul
     分布式配置 —— Spring Cloud Config
     消息总线 —— Spring Cloud Bus
-### 1.6、
+
 
 ## 3、业务实例
 
@@ -116,7 +122,7 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
 ![1588227544115](./data-service-guide.assets/1588227544115.png)
 
-生成的excel可以在资源管理中导入
+生成的excel可以在资源管理中导入（聚合表达式[配置详情](https://kromalee.github.io/vuepress-demo/data-service/sc.html#_2-3-%E8%81%9A%E5%90%88)）
 
 ![1588228098911](./data-service-guide.assets/1588228098911.png)
 
@@ -152,10 +158,9 @@ Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud
 
    ![1588142046553](./data-service-guide.assets/1588142046553.png)
 
-6. 
+
 
    
 
-### 3.2、
 
 ### 
