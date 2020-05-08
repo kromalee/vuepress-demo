@@ -31,11 +31,6 @@ module.exports = {
   //图像缩放插件
   "@vuepress/medium-zoom": {
     selector: "img"
-    // medium-zoom options here
-    // See: https://github.com/francoischalifour/medium-zoom#options
-    // options: {
-    //     margin: 16
-    // }
   },
   //自动追踪侧边栏插件
   "@vuepress/active-header-links": true,
@@ -58,5 +53,4 @@ module.exports = {
   flowchart: true,
   "vuepress-plugin-smooth-scroll": true,
   "reading-progress": true,
-  pangu: {}
 };

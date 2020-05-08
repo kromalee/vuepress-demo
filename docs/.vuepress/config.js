@@ -6,14 +6,18 @@ const markdownConfig = require("./config/markdownConfig.js");
 const searchConfig = require("./config/searchConfig.js");
 const gitConfig = require("./config/gitConfig.js");
 
+const fs = require('fs')
+const { join } = require("path");
+let meta = JSON.parse(fs.readFileSync(join(__dirname, '../meta.json'), 'utf-8'))
+
 module.exports = {
   //基本配置
-  base: "/vuepress-demo/",
-  title: "Togest Developers",
-  description: "Build anything with this platform",
+  base: meta.base,
+  title: meta.title,
+  description: meta.description,
   head: headConfig,
-  host: "0.0.0.0",
-  port: 8091,
+  host: meta.host,
+  port: meta.port,
   locales: undefined,
   shouldPrefetch: () => true,
 

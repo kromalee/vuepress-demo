@@ -1,3 +1,8 @@
+const fs = require('fs')
+const { join } = require("path");
+let meta = JSON.parse(fs.readFileSync(join(__dirname, '../../meta.json'), 'utf-8'))
+
+
 module.exports = {
     lastUpdated: '最后更新于 ',
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
