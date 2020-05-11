@@ -1,86 +1,68 @@
 {
-    "/guide/": [
-        "",
-        "web-application-guide",
-        "data-service-guide",
-        "flow-engine-guide"
-    ],
-    "/web-application/": [
-        "",
-        {
-            "title": "抽象功能",
-            "sidebarDepth": 0,
-            "children": [
-                "libs/vue-doc",
-                "libs/element-ui-doc",
-                "libs/togestui-components",
-                "libs/component",
-                "libs/tg-el-tree-select",
-                "libs/tg-el-eject-iframe"
-            ]
-        },
-        {
-            "title": "平台服务",
-            "sidebarDepth": 0,
-            "children": [
-                "base/resource-config",
-                "base/tg-el-save",
-                "base/tg-el-search",
-                "base/easy-table",
-                "base/utils",
-                "base/business-reminder-framework"
-            ]
-        },
-        {
-            "title": "业务实践",
-            "sidebarDepth": 0,
-            "children": [
-                "business/list-page-best-practice"
-            ]
-        },
-        {
-            "title": "前端培训(迁移到指南)",
-            "sidebarDepth": 0,
-            "children": [
-                "train/front-first-step",
-                "train/front-guide"
-            ]
-        },
-        {
-            "title": "工程工具",
-            "sidebarDepth": 0,
-            "children": [
-                "tool/docs",
-                "tool/code-maker",
-                "tool/style-management"
-            ]
-        }
-    ],
-    "/data-service/": [
-        "",
-        "sc"
-    ],
-    "/flow-engine/": [
-        "",
-        {
-            "title": "状态型工作流",
-            "sidebarDepth": 0,
-            "children": [
-                "statusflow/statusflow-guide",
-                "statusflow/statusflow-config",
-                "statusflow/statusflow-apis2",
-                "statusflow/statusflow-apis",
-                "statusflow/statusflow-best-practice",
-                "statusflow/statusflow-spec"
-            ]
-        }
-    ],
-    "/business-intelligence/": [
-        ""
-    ],
-    "/contribute/": [
-        "",
-        "doc-rulses",
-        "vue-component-demo"
-    ]
+  "/guide/": [
+    "",
+    "web-application-guide",
+    "data-service-guide",
+    "flow-engine-guide"
+  ],
+  "/web-application/": [
+    "",
+    {
+      "title": "抽象功能",
+      "sidebarDepth": 0,
+      "children": [
+        "libs/vue-doc",
+        "libs/element-ui-doc",
+        "libs/togestui-components",
+        "libs/component",
+        "libs/tg-el-tree-select",
+        "libs/tg-el-eject-iframe"
+      ]
+    },
+    {
+      "title": "平台服务",
+      "sidebarDepth": 0,
+      "children": [
+        "base/resource-config",
+        "base/tg-el-save",
+        "base/tg-el-search",
+        "base/easy-table",
+        "base/form-method",
+        "base/business-reminder-framework"
+      ]
+    },
+    {
+      "title": "业务实践",
+      "sidebarDepth": 0,
+      "children": ["business/list-page-best-practice"]
+    },
+    {
+      "title": "前端培训(迁移到指南)",
+      "sidebarDepth": 0,
+      "children": ["train/front-first-step", "train/front-guide"]
+    },
+    {
+      "title": "工程工具",
+      "sidebarDepth": 0,
+      "children": ["tool/docs", "tool/code-maker", "tool/style-management"]
+    }
+  ],
+  "/data-service/": ["", "sc"],
+  "/flow-engine/": [
+    "",
+    {
+      "title": "状态型工作流",
+      "sidebarDepth": 0,
+      "children": [
+        "statusflow/statusflow-guide",
+        "statusflow/statusflow-config",
+        "statusflow/statusflow-apis2",
+        "statusflow/statusflow-apis",
+        "statusflow/statusflow-best-practice",
+        "statusflow/statusflow-spec"
+      ]
+    }
+  ],
+  "/business-intelligence/": [""],
+  "/contribute/": ["", "doc-rulses", "vue-component-demo"]
 }
