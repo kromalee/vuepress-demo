@@ -43,7 +43,7 @@ sidebarDepth: 3
 
    ![1588231510495](./flow-engine-guide.assets/1588231510495.png)
 
-6. 
+6.
 
 ### 1.3、流程事件
 
@@ -52,8 +52,6 @@ sidebarDepth: 3
 ### 1.4、流程接口
 
 ![1588230389086](./flow-engine-guide.assets/1588230389086.png)
-
-
 
 ## 2、状态流程
 
@@ -69,8 +67,4 @@ sidebarDepth: 3
      `process_def_key` varchar(255) DEFAULT NULL COMMENT '流程定义key',
    ```
 
-   
-
-2. [详细](https://kromalee.github.io/vuepress-demo/data-service/sc.html#_2-7-%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E)
-
-   
+2) [详细](https://kromalee.github.io/vuepress-demo/data-service/sc.html#_2-7-%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E)

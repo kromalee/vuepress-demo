@@ -3,7 +3,8 @@
     "",
     "web-application-guide",
     "data-service-guide",
-    "flow-engine-guide"
+    "flow-engine-guide",
+    "web-application-platform-dev-guide"
   ],
   "/web-application/": [
     "",
@@ -24,11 +25,14 @@
       "sidebarDepth": 0,
       "children": [
         "base/resource-config",
+        "base/menu-config",
+        "base/business-reminder-framework",
+        "base/easy-table",
+        "base/easy-dialog",
         "base/tg-el-save",
         "base/tg-el-search",
-        "base/easy-table",
-        "base/form-method",
-        "base/business-reminder-framework"
+        "base/ajax-api-service",
+        "base/form-method"
       ]
     },
     {
@@ -44,7 +48,12 @@
     {
       "title": "工程工具",
       "sidebarDepth": 0,
-      "children": ["tool/docs", "tool/code-maker", "tool/style-management"]
+      "children": [
+        "tool/deploy",
+        "tool/docs",
+        "tool/code-maker",
+        "tool/style-management"
+      ]
     }
   ],
   "/data-service/": ["", "sc"],

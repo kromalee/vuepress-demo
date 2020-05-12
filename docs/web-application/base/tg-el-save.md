@@ -1,6 +1,8 @@
-# TgElSave表单
+# 业务组件:TgElSave 表单
+
 ## APIs
-###  PROPS
+
+### PROPS
 
 | 属性         | 说明         | 类型                                                   | 默认值       |
 | ------------ | ------------ | ------------------------------------------------------ | ------------ |
@@ -12,16 +14,12 @@
 //layoutConfig补充说明
 //默认配置
 {
-numberOfColumns: 2, //表格列数 
-labelWidth: '150px', //label宽度 
+numberOfColumns: 2, //表格列数
+labelWidth: '150px', //label宽度
 size: 'medium', //表单项尺寸 可选:'medium / small / mini'
 labelPosition: 'right' //label的位置 'right/left/top'
 }
 ```
-
-
-
-
 
 ### EVENT
 
@@ -31,21 +29,21 @@ labelPosition: 'right' //label的位置 'right/left/top'
 
 ### EVENT BUS
 
-> 在vue实例的mounted生命周期: `this.$root.eventBus.$on('中划线命名的事件名',callback)`
+> 在 vue 实例的 mounted 生命周期: `this.$root.eventBus.$on('中划线命名的事件名',callback)`
 
-| 事件名                                 | 说明                            | 回调参数                          |
-| -------------------------------------- | ------------------------------- | --------------------------------- |
-| 组件配置里指定的changeMethod | 定义的changeMethod触发          | `{data:,eventName:,field:,node:}` |
-| xxx(filedName)-field-change            | 某个fieldName的组件change时触发 | `{data:,eventName:,field:,node:}` |
+| 事件名                        | 说明                                | 回调参数                          |
+| ----------------------------- | ----------------------------------- | --------------------------------- |
+| 组件配置里指定的 changeMethod | 定义的 changeMethod 触发            | `{data:,eventName:,field:,node:}` |
+| xxx(filedName)-field-change   | 某个 fieldName 的组件 change 时触发 | `{data:,eventName:,field:,node:}` |
 
 ### 实例属性
 
 | 属性名         | 说明                               | 类型   |
 | -------------- | ---------------------------------- | ------ |
 | oldFieldConfig | 获取表单当前所有信息(一般用于提交) | Object |
+
 ### 实例方法
 
-| 方法名      | 说明                                             |
-| ----------- | ------------------------------------------------ |
-| clearFields | 清空当前表单所有项目(注:与elementUI重置表单不同) |
-
+| 方法名      | 说明                                               |
+| ----------- | -------------------------------------------------- |
+| clearFields | 清空当前表单所有项目(注:与 elementUI 重置表单不同) |
