@@ -1,26 +1,30 @@
 [
-    {
-        "text": "指南",
-        "link": "/guide/"
-    },
-    {
-        "text": "前端",
-        "link": "/web-application/"
-    },
-    {
-        "text": "后端",
-        "link": "/data-service/"
-    },
-    {
-        "text": "流程",
-        "link": "/flow-engine/"
-    },
-    {
-        "text":"大屏",
-        "link":"/business-intelligence/"
-    },
-    {
-        "text": "贡献",
-        "link": "/contribute/"
-    }
+  {
+    "text": "指南",
+    "link": "/guide/"
+  },
+  {
+    "text": "前端",
+    "link": "/web-application/"
+  },
+  {
+    "text": "后端",
+    "link": "/data-service/"
+  },
+  {
+    "text": "流程",
+    "link": "/flow-engine/"
+  },
+  {
+    "text": "大屏",
+    "link": "/business-intelligence/"
+  },
+  {
+    "text": "工具",
+    "link": "/dev-tools/"
+  },
+  {
+    "text": "贡献",
+    "link": "/contribute/"
+  }
 ]

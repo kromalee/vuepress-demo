@@ -44,16 +44,6 @@
       "title": "前端培训(迁移到指南)",
       "sidebarDepth": 0,
       "children": ["train/front-first-step", "train/front-guide"]
-    },
-    {
-      "title": "工程工具",
-      "sidebarDepth": 0,
-      "children": [
-        "tool/deploy",
-        "tool/docs",
-        "tool/code-maker",
-        "tool/style-management"
-      ]
     }
   ],
   "/data-service/": ["", "sc"],
@@ -73,5 +63,6 @@
     }
   ],
   "/business-intelligence/": [""],
-  "/contribute/": ["", "doc-rulses", "vue-component-demo"]
+  "/contribute/": ["", "doc-rulses", "vue-component-demo"],
+  "/dev-tools/": ["", "deploy", "docs", "code-maker", "style-management"]
 }
