@@ -104,6 +104,29 @@ window.shareInfoWithChildren = function() {
 
 ## 业务页面向流程框架反馈,要求实现如下结构
 
+<!-- @flowstart
+st=>start: 开始
+e=>end: 结束
+requirement=>parallel: 点击提交
+menu=>operation: 配置菜单
+code=>operation: 生成代码
+link=>operation: 指定路由嵌入菜单
+debug=>operation: 调试功能
+pack=>operation: 打包部署
+test=>operation: 功能测试
+bug=>condition: 缺陷?
+
+st->requirement
+requirement(path1,left)->menu
+requirement(path2,bottom)->code
+menu->link
+code->link
+link->debug->pack->test->bug
+bug(no,bottom)->e
+bug(yes,right)->debug
+
+@flowend -->
+
 ```javascript
 window.save = function() {
   var defer = $.Deferred();
