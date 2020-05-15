@@ -1,4 +1,4 @@
-# API Reference v2(推荐):
+# 前端框架 API Reference v2(推荐):
 
 > 工具类调用流程框架,直接调用对应类的构造函数即可 static/js/util/statusFlowMethod.ts
 
