@@ -63,6 +63,6 @@
     }
   ],
   "/business-intelligence/": [""],
-  "/contribute/": ["", "doc-rulses", "vue-component-demo"],
+  "/contribute/": ["","docs-style-guide", "doc-rulses", "vue-component-demo"],
   "/dev-tools/": ["", "deploy", "docs", "code-maker", "style-management"]
 }
