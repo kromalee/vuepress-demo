@@ -4,6 +4,7 @@
     "web-application-guide",
     "data-service-guide",
     "flow-engine-guide",
+    "bi-reports-guide",
     "web-application-platform-dev-guide"
   ],
   "/web-application/": [
@@ -62,7 +63,7 @@
       ]
     }
   ],
-  "/business-intelligence/": [""],
-  "/contribute/": ["","docs-style-guide", "doc-rulses", "vue-component-demo"],
+  "/business-intelligence/": ["", "reports-api"],
+  "/contribute/": ["", "docs-style-guide", "doc-rulses", "vue-component-demo"],
   "/dev-tools/": ["", "deploy", "docs", "code-maker", "style-management"]
 }
