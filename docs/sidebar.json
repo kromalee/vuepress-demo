@@ -63,7 +63,22 @@
       ]
     }
   ],
-  "/business-intelligence/": ["", "reports-api"],
+  "/business-intelligence/": [
+    "",
+    {
+      "title": "报表",
+      "sidebarDepth": 0,
+      "children": [
+        "reports/0-introduction",
+        "reports/1-getting-started",
+        "reports/2-basics",
+        "reports/3-advancad",
+        "reports/4-api-reference",
+        "reports/5-faq",
+        "reports/6-appendix"
+      ]
+    }
+  ],
   "/contribute/": ["", "docs-style-guide", "doc-rulses", "vue-component-demo"],
   "/dev-tools/": ["", "deploy", "docs", "code-maker", "style-management"]
 }
