@@ -16,9 +16,9 @@
         "libs/vue-doc",
         "libs/element-ui-doc",
         "libs/togestui-components",
-        "libs/component",
         "libs/tg-el-tree-select",
-        "libs/tg-el-eject-iframe"
+        "libs/tg-el-eject-iframe",
+        "libs/utils-doc"
       ]
     },
     {
@@ -27,6 +27,7 @@
       "children": [
         "base/resource-config",
         "base/menu-config",
+        "base/system-variable",
         "base/business-reminder-framework",
         "base/easy-table",
         "base/easy-dialog",
@@ -80,5 +81,11 @@
     }
   ],
   "/contribute/": ["", "docs-style-guide", "doc-rulses", "vue-component-demo"],
-  "/dev-tools/": ["", "deploy", "docs", "code-maker", "style-management"]
+  "/dev-tools/": [
+    "",
+    "front-deploy",
+    "docs",
+    "front-code-maker",
+    "style-management"
+  ]
 }

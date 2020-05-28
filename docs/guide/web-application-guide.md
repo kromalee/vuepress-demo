@@ -2,7 +2,7 @@
 sidebarDepth: 3
 ---
 
-# 前端研发入门教程
+# `EMIS8000`前端教程
 
 > 业务研发 EMIS8000
 
@@ -59,7 +59,7 @@ bug(yes,right)->debug
 
 @flowend
 
-### 3.1 需求定义(由业务人员提供)
+### 3.1 需求定义菜单和模型(运营提供)
 
 - 明确的菜单设计,包括模块归属及左侧菜单树的结构和各个按钮的设计
 - 明确的字段设计,需要知道列表,新增,编辑,详情等各个状态字段的状态及其中的关联逻辑
@@ -70,7 +70,7 @@ bug(yes,right)->debug
 
 ### 3.3 代码生成器生成初始代码
 
-> 请参阅 [代码生成器](../web-application/tool/code-maker.md)
+> 请参阅 [代码生成器](../dev-tools/front-code-maker.md)
 
 ### 3.4 指定路由嵌入菜单
 
@@ -196,17 +196,23 @@ require(["/js/config/requireConfig.js"], function(config) {
 
 ### 4.3 完善列表页
 
-> 基于`EasyTable`组件的元数据驱动的新增编辑页面
+> - 基于`EasyTable`组件的元数据驱动的新增编辑页面
+> - 请参阅:
+>   - [平台服务:元数据管理](../web-application/base/easy-table.md)
+>   - [业务组件:EasyTable 组件](../web-application/base/easy-table.md)
+>   - [列表页-最佳实践](../web-application/business/list-page-best-practice.md)
 
 #### 4.3.1 模式一 标准单表列表及检索
 
 #### 4.3.2 其他模式
 
-> 详见 [列表页-最佳实践](../web-application/business/list-page-best-practice.md)
-
 ### 4.4 完善新增编辑页
 
-> 基于`TgElSave`组件的元数据驱动的新增编辑页面
+> - 基于`TgElSave`组件的元数据驱动的新增编辑页面
+> - 请参阅:
+>   - [平台服务:元数据管理](../web-application/base/easy-table.md)
+>   - [业务组件:TgElSave 组件](../web-application/base/tg-el-save.md)
+>   - [表单页面最佳实践]()
 
 ### 4.5 补充详情页
 
