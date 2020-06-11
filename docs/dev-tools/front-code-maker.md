@@ -18,4 +18,4 @@
 
 例子：变电管理（substation）-值守(duty)-电量配置(runElectricConfig-资源码)
 
-![demo](front-code-maker/demo.png)
+![demo](./front-code-maker/demo.png)
