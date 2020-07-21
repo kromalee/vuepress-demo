@@ -29,10 +29,10 @@ sidebarDepth: 3
 - 安装 svn 小乌龟 [下载](https://tortoisesvn.net/downloads.zh.html) 安装时一定要勾选命令行接口
 - 安装 idea [下载](https://pan.baidu.com/s/1KpRN9T_X2KFwhTVjSeW3mQ) 提取码：43hy
 - Node.js 10+ 和 NPM 包管理器 [官网](https://nodejs.org/zh-cn/)
-- idea 安装 Lombok 插件
+- idea 安装 Lombok 插件 [?](https:www.baidu.com)
 - 使用 svn 小乌龟下载项目
 - idea 导入项目
-- 配置 idea 热更新
+- 配置 idea 热更新 [?](https:www.baidu.com)
 
 ## 3. 添加一个业务功能
 
