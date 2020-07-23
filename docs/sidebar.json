@@ -30,6 +30,8 @@
         "base/system-variable",
         "base/business-reminder-framework",
         "base/easy-table",
+        "base/import",
+        "base/export",
         "base/easy-dialog",
         "base/tg-el-save",
         "base/tg-el-search",
