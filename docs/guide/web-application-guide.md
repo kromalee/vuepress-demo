@@ -232,4 +232,6 @@ require(["/js/config/requireConfig.js"], function(config) {
 
 ### 5.2 提交测试
 
+- [提测材料](../dev-tools/submit-test.md)
+
 ### 5.3 追踪缺陷

@@ -88,6 +88,7 @@
     "front-deploy",
     "docs",
     "front-code-maker",
-    "style-management"
+    "style-management",
+    "submit-test"
   ]
 }
