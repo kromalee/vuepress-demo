@@ -43,6 +43,7 @@
 
 
         //办理人相关配置
+        "multipleActor":Boolean, 多选下一步办理人,默认是false,可选
         "hideTaskUser":Boolean,//隐藏下一步办理人,默认是false,可选
         "actorLabel":"下一步办理人", //下步办理人提示输入标签
     	"commentLabel":"办理意见"
