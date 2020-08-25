@@ -28,7 +28,7 @@
         "base/resource-config",
         "base/menu-config",
         "base/system-variable",
-        "base/business-reminder-framework",
+        "base/business-alert",
         "base/easy-table",
         "base/import",
         "base/export",
