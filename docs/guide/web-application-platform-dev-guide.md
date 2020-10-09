@@ -47,11 +47,11 @@
 - 重新封装服务工具类static/utils/axios.js
 - 注意：表格请求服务依旧使用的是jQueryajax（框架限制）
 - api管理不再通过手动管理，使用根目录写的工具apiService.js
-- 使用方式见使用方式见<a href="./vuepress-demo/docs/web-application/base/axios-service.md">平台工具:与服务端交互及API工具(地铁信息化)</a>
+- 使用方式见使用方式见<a href="../web-application/base/axios-service.html">平台工具:与服务端交互及API工具(地铁信息化)</a>
 
 ### 弹框
 
-- 使用通过elementui dialog组件封装的服务组件，使用方式见弹窗组件使用指南[待完善]
+- 使用通过elementui dialog组件封装的服务组件，使用方式见<a href="../web-application/base/el-dialog-service.html">平台服务：弹框服务</a>
 
 
 
