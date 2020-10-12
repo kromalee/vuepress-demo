@@ -13,7 +13,8 @@
 - jdk11(企业微信-微盘-研发组共享空间-工具-JDK)
 - <a href="http://nodejs.cn/download/">nodejs</a>
 - svn(企业微信-微盘-研发组共享空间-工具-JDK)
-- idea（自行处理）###操作步骤
+- idea（自行处理）
+### 操作步骤
 
 - svn checkout项目（地址：http://43.227.254.58:3690/svn/XT/Subway/Front/01_source/trunk/pdp-cms-front）
 
@@ -29,7 +30,6 @@
 
     > 设置中搜索prettier，在plugins中设置prettier的可执行文件地址（全局安装使用全局地址，本地安装使用本地地址）
     >
-    > 在
     >
     > 建议：格式化快捷键配置如下
     >
