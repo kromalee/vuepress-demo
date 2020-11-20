@@ -25,6 +25,18 @@
   - 加参数`shutCart="目标模块权限码"` 将自动展开该菜单
   - 不要使用 `target="_blank"`打开新的标签页
 
+- 隐藏无效的通知
+  - 通知的业务组件务必有name, 
+  - 在通知业务组件内部,触发事件'empty',且携带当前组件名 
+  ```javascript
+    //示例:如果请求结果为 0条 需要处理,则隐藏这条通知
+    ajax.get(/*somthing*/)
+        .then(function(res){
+        if(res.count===0) {this.$emit('empty',/*当前组件名*/)}
+        }.bind(this))
+    
+  ```
+
 - 可以直接使用Element组件,无需依赖vue,Element
 
   ```javascript
