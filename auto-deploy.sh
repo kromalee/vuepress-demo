@@ -21,6 +21,6 @@ git commit -m 'deploy'
 
 # 提供gitpush的环境
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://Kromalee:$GITHUB_TOKEN@github.com/$PAGE_REPO master:$PAGE_BRAN
+git push -f https://kromalee:$GITHUB_TOKEN@github.com/$PAGE_REPO master:$PAGE_BRAN
 
 cd -
