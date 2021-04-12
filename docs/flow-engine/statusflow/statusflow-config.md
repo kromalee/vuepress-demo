@@ -48,6 +48,7 @@
         "actorLabel":"下一步办理人", //下步办理人提示输入标签
     	"commentLabel":"办理意见"
         "anyActor":false ,//任意角色选择
+        "anyActorIndependent":false, //任意角色选择是否独立,默认系统推荐选人与自由选人是互斥的,配置此项则两个选人方式独立存在
         //部门选择树配置JSON scheme
         "anyActorDeptScheme":{
         },
