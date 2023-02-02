@@ -21,7 +21,7 @@
     "axios": "0.21.2",
     "element-ui": "^2.12.0",
     "vuepress": "^1.4.0",
-    "vuepress-plugin-demo-code": "^0.3.5",
+    "vuepress-plugin-demo-code": "^1.0.0",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-reading-progress": "^1.0.7"
   }
